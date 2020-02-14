@@ -99,3 +99,18 @@ d) Delete a rule defined:
 }
 ]}}
 ```
+
+e) Scope of data producer:
+
+```
+{"contextElement":{
+"type" : "Termometer",
+"id" : "1",
+"attributes" : [
+{ 
+"name" : "temperature",
+"type" : "Double",
+"value" : "2"
+}
+]}}
+```
