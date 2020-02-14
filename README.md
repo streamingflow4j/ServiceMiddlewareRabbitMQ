@@ -51,7 +51,7 @@ b) Creating context rules for event types:
 "attributes" : [
 { "name"  : "RULE",   --Attribute for rule definition
 "type"  : "String",
-"value" : "select temperature from Termometro.win:time(5 sec)"
+"value" : "select temperature from Termometer.win:time(5 sec)"
 },
 {
 "name"  : "QUEUE_1",
@@ -74,7 +74,7 @@ c) Updating context rules for event types:
 {
 "name"  : "RULE",    --Attribute for rule update
 "type"  : "String",  
-"value" : "select temperature from Termometro.win:time(10 sec)"
+"value" : "select temperature from Termometer.win:time(10 sec)"
 }
 {
 "name"  : "QUEUE_1",
