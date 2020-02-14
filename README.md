@@ -19,7 +19,7 @@ Sending message to rabbitMQ queues with the following scope.
 ### API elements
 - ADD_EVENT ```add event type, every before specific rule```
 - RULECEP   ```define addiction of a rule```
-- RULE ```indicate the QUERY to be add(EX.: select temperature from Termometro.win:time(5 sec))``` 
+- RULE ```indicate the QUERY to be add(EX.: select temperature from Termometer.win:time(5 sec))``` 
 -	QUEUE ```define destination queue of rule trigger```
 - EDIT_RULECEP ```define EDITION of a rule```	
 - RULE_ID ```ID of rule to be EDITED/deleted```
