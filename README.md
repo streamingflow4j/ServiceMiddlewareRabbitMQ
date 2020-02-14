@@ -14,7 +14,7 @@ Install and run RabbitMQ. More informations(https://www.rabbitmq.com/#getstarted
 5. Run it using `java -cp target/ServiceMiddlewareCEPRabbitMQ.jar com.service.middleware.main.MainServiceMiddlewareRabbitMQ`
 
 ## API examples (Monitoring Temperature):
-Sending message to rabbitMQ queue 'queue.rule.cep' with the following scope.
+Sending message to rabbitMQ queues with the following scope.
 
 ### API elements
 - ADD_EVENT ```add event type, every before specific rule```
@@ -41,7 +41,8 @@ a) Defining a context element entity for event types:
 "type"  : "Double",
 "value" : "0"
 }
-]}}
+]
+}}
 ```
 b) Creating context rules for event types:
 ```
@@ -58,7 +59,8 @@ b) Creating context rules for event types:
 "type"  : "QUEUE",         --Attribute for destination queue of rule outcomes
 "value" : "si.cep.queue" 
 }
-]}}
+]
+}}
 ```
 c) Updating context rules for event types:
 ```
@@ -81,14 +83,14 @@ c) Updating context rules for event types:
 "type"  : "QUEUE",        --You can change destination queue or else keep the same
 "value" : "si.cep.queue"
 }
-]}}
+]
+}}
 ```
 
 d) Delete a rule defined:
 
 ```
-{
-"contextElement":{
+{"contextElement":{
 "type" : "DEL_RULE",
 "id" : "DelRule3",
 "attributes" : [
@@ -97,7 +99,8 @@ d) Delete a rule defined:
 "type"  : "String",
 "value" : "d081f1bc-4d68-4427-bd47-59684e480327"
 }
-]}}
+]
+}}
 ```
 
 e) Scope of data producer:
@@ -112,5 +115,6 @@ e) Scope of data producer:
 "type" : "Double",
 "value" : "2"
 }
-]}}
+]
+}}
 ```
