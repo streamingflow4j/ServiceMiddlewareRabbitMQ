@@ -118,3 +118,19 @@ e) Scope of data producer:
 ]
 }}
 ```
+
+f) Scope of data Consumer:
+
+```
+{"contextElement":{
+"type" : "EventCEP",
+"id" : "1582033487619",
+"attributes" : [
+{
+"name":"temperature",
+"type" :"String",
+"value":"13.0"
+}
+]
+}}
+```
