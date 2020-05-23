@@ -24,7 +24,7 @@
 	<int:channel id="fromRabbit"></int:channel>
 	<!-- transforms currentTemp::tempScale into a Temperature pojo -->
 	<bean id="transformer" class="com.sample.consumer.util.Listener"/>
-	<int:transformer id="POJO" input-channel="fromRabbit" output-channel="subscribe-db"	method="toTemp" ref="transformer">
+	<int:transformer id="POJO" input-channel="fromRabbit" method="toTemp" ref="transformer">
 	</int:transformer>
 	
 	<!-- Infrastructure -->
