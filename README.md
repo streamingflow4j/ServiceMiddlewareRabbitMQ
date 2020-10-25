@@ -35,7 +35,7 @@ a) Defining a context element entity for event types:
 "name"  : "id",
 "type"  : "String",
 "value" : "0"
-}
+},
 {
 "name" : "temperature",
 "type"  : "Double",
@@ -72,12 +72,12 @@ c) Updating context rules for event types:
 "name"  : "RULE_ID",   --Obs.: rule id can be obtained in the logfile.
 "type"  : "String",
 "value" : "f9c9c1c1-d1ed-4f03-99cb-7083533ac2e0"
-}
+},
 {
 "name"  : "RULE",    --Attribute for rule update
 "type"  : "String",  
 "value" : "select temperature from Termometer.win:time(10 sec)"
-}
+},
 {
 "name"  : "QUEUE_1",
 "type"  : "QUEUE",        --You can change destination queue or else keep the same
