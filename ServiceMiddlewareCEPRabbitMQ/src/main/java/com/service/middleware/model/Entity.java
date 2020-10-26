@@ -3,13 +3,21 @@ package com.service.middleware.model;
 import java.util.List;
 
 public class Entity {
+	
 	private String id;
 	private String type;
-	private List<Attributes> attributes;
+	private List<Attribute> attributes;
 
 	public Entity() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	public Entity(String id, String type, List<Attribute> attributes) {
+		super();
+		this.id = id;
+		this.type = type;
+		this.attributes = attributes;
 	}
 
 	public String getType() {
@@ -28,11 +36,11 @@ public class Entity {
 		this.id = id;
 	}
 
-	public List<Attributes> getAttributes() {
+	public List<Attribute> getAttributes() {
 		return attributes;
 	}
 
-	public void setAttributes(List<Attributes> attributes) {
+	public void setAttributes(List<Attribute> attributes) {
 		this.attributes = attributes;
 	}
 

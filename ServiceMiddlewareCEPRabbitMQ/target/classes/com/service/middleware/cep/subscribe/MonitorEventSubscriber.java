@@ -10,7 +10,7 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
-import com.service.middleware.model.Attributes;
+import com.service.middleware.model.Attribute;
 import com.service.middleware.model.CollectType;
 import com.service.middleware.model.Entity;
 
@@ -78,8 +78,8 @@ public class MonitorEventSubscriber implements StatementSubscriber {
 	}
 
 	public String getPayload(String value) {
-		return "{\"contextElement\":{\"type\" : \"EventCEP\",\"id\" : \"" + String.valueOf(System.currentTimeMillis())
-				+ "\",\"attributes\" : [" + value + "]}}";
+		return "{\"type\" : \"EventCEP\",\"id\" : \"" + String.valueOf(System.currentTimeMillis())
+				+ "\",\"attributes\" : [" + value + "]}";
 	}
 
 	public String getRule() {
@@ -105,7 +105,7 @@ public class MonitorEventSubscriber implements StatementSubscriber {
 	public String setMyEntity(Entity myEntity) {
 		this.myEntity = myEntity;
 		Map<String, String> update = new HashMap<String, String>();
-		for (Attributes rule : myEntity.getAttributes()) {
+		for (Attribute rule : myEntity.getAttributes()) {
 			if (verifyDelRule(myEntity)) {
 				if (rule.getName().equals(CollectType.RULE_ATTR_ID.getName())) {
 					return rule.getValue();
