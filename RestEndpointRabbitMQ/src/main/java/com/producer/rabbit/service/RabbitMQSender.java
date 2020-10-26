@@ -29,7 +29,7 @@ public class RabbitMQSender {
 	
 	private static final String EXCHANE = "amq.direct";
 	
-	private static final String QUEUE_DATA = "si.queue.teste";
+	private static final String QUEUE_DATA = "si.test.queue";
 	
 	private static final String QUEUE_RULE = "si.ceprule.queue";
 
