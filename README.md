@@ -15,7 +15,7 @@ Install and run RabbitMQ. More informations(https://www.rabbitmq.com/#getstarted
 
 ## 3. API examples (Monitoring Temperature):
 Sending message to rabbitMQ queues with the following scope.
-Execute RestEndpointKafka Spring Boot application
+Execute RestEndpointRabbitMQ Spring Boot application
 
 
 ### API elements
@@ -29,7 +29,7 @@ Execute RestEndpointKafka Spring Boot application
 
 a) Defining a context element entity for event types:
 
--- post Kafka endpoint: </endpoint-address-uri>/kafka/create/event
+-- post RabbitMQ endpoint: </endpoint-address-uri>/rabbitmq/create/event
 -- post Body:
 ```
 {
@@ -51,7 +51,7 @@ a) Defining a context element entity for event types:
 ```
 b) Creating context rules for event types:
 
--- post Kafka endpoint: </endpoint-address-uri>/kafka/create/rule
+-- post RabbitMQ endpoint: </endpoint-address-uri>/rabbitmq/create/rule
 -- post Body:
 ```
 {
@@ -72,7 +72,7 @@ b) Creating context rules for event types:
 ```
 c) Updating context rules for event types:
 
--- put Kafka endpoint: </endpoint-address-uri>/kafka/update/rule
+-- put RabbitMQ endpoint: </endpoint-address-uri>/rabbitmq/update/rule
 -- put Body:
 ```
 {"contextElement":{
@@ -100,7 +100,7 @@ c) Updating context rules for event types:
 
 d) Delete a rule defined:
 
--- delete Kafka endpoint: </endpoint-address-uri>/kafka/delete/rule
+-- delete RabbitMQ endpoint: </endpoint-address-uri>/rabbitmq/delete/rule
 -- post Body:
 ```
 {"contextElement":{
@@ -118,7 +118,7 @@ d) Delete a rule defined:
 
 e) Scope of data producer:
 
--- post Kafka endpoint: </endpoint-address-uri>/kafka/create/data
+-- post RabbitMQ endpoint: </endpoint-address-uri>/rabbitmq/create/data
 -- post Body:
 ```
 {"contextElement":{
