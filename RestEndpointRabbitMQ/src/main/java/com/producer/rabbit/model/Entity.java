@@ -1,9 +1,8 @@
-package com.service.middleware.model;
+package com.producer.rabbit.model;
 
 import java.util.List;
 
 public class Entity {
-	
 	private String id;
 	private String type;
 	private List<Attribute> attributes;
@@ -11,13 +10,6 @@ public class Entity {
 	public Entity() {
 		super();
 		// TODO Auto-generated constructor stub
-	}
-
-	public Entity(String id, String type, List<Attribute> attributes) {
-		super();
-		this.id = id;
-		this.type = type;
-		this.attributes = attributes;
 	}
 
 	public String getType() {

@@ -15,6 +15,8 @@ Install and run RabbitMQ. More informations(https://www.rabbitmq.com/#getstarted
 
 ## 3. API examples (Monitoring Temperature):
 Sending message to rabbitMQ queues with the following scope.
+Execute RestEndpointKafka Spring Boot application
+
 
 ### API elements
 - ADD_EVENT ```add event type, every before specific rule```
@@ -22,12 +24,15 @@ Sending message to rabbitMQ queues with the following scope.
 - RULE ```indicate the QUERY to be add(EX.: select temperature from Termometer.win:time(5 sec))``` 
 -	QUEUE ```define destination queue of rule trigger```
 - EDIT_RULECEP ```define EDITION of a rule```	
-- RULE_ID ```ID of rule to be EDITED/deleted```
+- RULE_ID ```ID of rule to be Edited/Deleted```
 - DEL_RULE ```command to delete rule```
 
 a) Defining a context element entity for event types:
+
+-- post Kafka endpoint: </endpoint-address-uri>/kafka/create/event
+-- post Body:
 ```
-{"contextElement":{
+{
 "type" : "ADD_EVENT",
 "id" : "Termometer",
 "attributes" : [
@@ -42,11 +47,14 @@ a) Defining a context element entity for event types:
 "value" : "0"
 }
 ]
-}}
+}
 ```
 b) Creating context rules for event types:
+
+-- post Kafka endpoint: </endpoint-address-uri>/kafka/create/rule
+-- post Body:
 ```
-{"contextElement":{
+{
 "type" : "RULECEP", 
 "id" : "Rule7",
 "attributes" : [
@@ -60,9 +68,12 @@ b) Creating context rules for event types:
 "value" : "si.cep.queue" 
 }
 ]
-}}
+}
 ```
 c) Updating context rules for event types:
+
+-- put Kafka endpoint: </endpoint-address-uri>/kafka/update/rule
+-- put Body:
 ```
 {"contextElement":{
 "type" : "EDIT_RULECEP",
@@ -89,6 +100,8 @@ c) Updating context rules for event types:
 
 d) Delete a rule defined:
 
+-- delete Kafka endpoint: </endpoint-address-uri>/kafka/delete/rule
+-- post Body:
 ```
 {"contextElement":{
 "type" : "DEL_RULE",
@@ -105,6 +118,8 @@ d) Delete a rule defined:
 
 e) Scope of data producer:
 
+-- post Kafka endpoint: </endpoint-address-uri>/kafka/create/data
+-- post Body:
 ```
 {"contextElement":{
 "type" : "Termometer",
