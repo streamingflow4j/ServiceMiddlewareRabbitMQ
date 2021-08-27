@@ -29,7 +29,7 @@ Execute RestEndpointRabbitMQ Spring Boot application
 
 a) Defining a context element entity for event types:
 
--- post RabbitMQ endpoint: </endpoint-address-uri>/rabbitmq/create/event
+-- post RabbitMQ endpoint: </endpoint-address-uri>/rabbitmq/event/create
 -- post Body:
 ```
 {
@@ -51,7 +51,7 @@ a) Defining a context element entity for event types:
 ```
 b) Creating context rules for event types:
 
--- post RabbitMQ endpoint: </endpoint-address-uri>/rabbitmq/create/rule
+-- post RabbitMQ endpoint: </endpoint-address-uri>/rabbitmq/rule/create
 -- post Body:
 ```
 {
@@ -72,7 +72,7 @@ b) Creating context rules for event types:
 ```
 c) Updating context rules for event types:
 
--- put RabbitMQ endpoint: </endpoint-address-uri>/rabbitmq/update/rule
+-- put RabbitMQ endpoint: </endpoint-address-uri>/rabbitmq/rule/update
 -- put Body:
 ```
 {
@@ -100,7 +100,7 @@ c) Updating context rules for event types:
 
 d) Delete a rule defined:
 
--- delete RabbitMQ endpoint: </endpoint-address-uri>/rabbitmq/delete/rule
+-- delete RabbitMQ endpoint: </endpoint-address-uri>/rabbitmq/rule/delete
 -- post Body:
 ```
 {
@@ -118,7 +118,7 @@ d) Delete a rule defined:
 
 e) Scope of data producer:
 
--- post RabbitMQ endpoint: </endpoint-address-uri>/rabbitmq/create/data
+-- post RabbitMQ endpoint: </endpoint-address-uri>/rabbitmq/data/create
 -- post Body:
 ```
 {
