@@ -12,6 +12,7 @@ import org.springframework.amqp.rabbit.core.RabbitAdmin;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.SimpleMessageConverter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -26,23 +27,23 @@ public class RabbitMQSender {
 	
 	@Autowired
 	private ConnectionFactory connectionFactory;
-	
-	private static final String EXCHANE = "amq.direct";
-	
-	private static final String QUEUE_DATA = "si.test.queue";
-	
-	private static final String QUEUE_RULE = "si.ceprule.queue";
 
 	private ObjectMapper objectMapper = new ObjectMapper();
 	
 	private String payload = "";
 	
+	private final Environment env;
+	
+	public RabbitMQSender(Environment env) {
+		this.env = env;
+	}
+	
 	public void sendData(Entity entity) throws JsonProcessingException {
-		this.send(entity,QUEUE_DATA); 
+		this.send(entity,getQUEUE_DATA()); 
 	}	
 	
     public void sendRule(Entity entity) throws JsonProcessingException {
-    	this.send(entity,QUEUE_RULE);    
+    	this.send(entity,getQUEUE_RULE());    
 	}
 	
 	
@@ -51,13 +52,29 @@ public class RabbitMQSender {
 		payload = objectMapper.writeValueAsString(entity);
 		AmqpAdmin amqpAdmin = new RabbitAdmin(connectionFactory);
 		amqpAdmin.declareQueue(new Queue(queue, true));
-		amqpAdmin.declareBinding(new Binding(queue, Binding.DestinationType.QUEUE, EXCHANE, queue, new HashMap<>()));		
+		amqpAdmin.declareBinding(new Binding(queue, Binding.DestinationType.QUEUE, getEXCHANE(), queue, new HashMap<>()));		
 	
 		rabbitTemplate.setMessageConverter(new SimpleMessageConverter());		
-		rabbitTemplate.convertAndSend(EXCHANE, queue, payload);
+		rabbitTemplate.convertAndSend(getEXCHANE(), queue, payload);
 		System.out.println("Send msg = " + entity.toString());
 	    
 	}
 	
+	public String load(String propertyName) { 
+		return env.getRequiredProperty(propertyName); 
+	}
 	
+	public String getEXCHANE() {
+		return load("rabbitmq.exchange");
+		
+	}
+
+	public String getQUEUE_DATA() {
+		return load("rabbitmq.data.queue");
+		
+	}
+
+	public String getQUEUE_RULE() {
+		return load("rabbitmq.data.queue");		
+	}
 }
