@@ -65,16 +65,16 @@ public class RabbitMQSender {
 	}
 	
 	public String getEXCHANE() {
-		return load("rabbitmq.exchange");
+		return load("spring.rabbitmq.exchange");
 		
 	}
 
 	public String getQUEUE_DATA() {
-		return load("rabbitmq.data.queue");
+		return load("spring.rabbitmq.data.queue");
 		
 	}
 
 	public String getQUEUE_RULE() {
-		return load("rabbitmq.data.queue");		
+		return load("spring.rabbitmq.data.queue");		
 	}
 }
