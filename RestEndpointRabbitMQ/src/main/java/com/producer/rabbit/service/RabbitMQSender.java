@@ -75,6 +75,6 @@ public class RabbitMQSender {
 	}
 
 	public String getQUEUE_RULE() {
-		return load("spring.rabbitmq.data.queue");		
+		return load("spring.rabbitmq.rule.queue");		
 	}
 }

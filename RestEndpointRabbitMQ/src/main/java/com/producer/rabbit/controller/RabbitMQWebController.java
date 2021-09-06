@@ -25,34 +25,34 @@ public class RabbitMQWebController {
 	@PostMapping(value = "/data/create")
 	public String newData(@RequestBody Entity entity) throws JsonProcessingException {	
 		rabbitMQSender.sendData(entity);
-		return "Message sent to the Kafka JavaInUse Successfully";
+		return "Message sent to the RabbitMQ JavaInUse Successfully";
 	}
 	
 	@ResponseStatus(HttpStatus.OK)
 	@PostMapping(value = "/event/create")
 	public String newEvent(@RequestBody Entity entity) throws JsonProcessingException {
 		rabbitMQSender.sendRule(entity);
-		return "Message sent to the Kafka JavaInUse Successfully";
+		return "Message sent to the RabbitMQ JavaInUse Successfully";
 	}
 	
 	@ResponseStatus(HttpStatus.OK)
 	@PostMapping(value = "/rule/create")
 	public String createRule(@RequestBody Entity entity) throws JsonProcessingException {
 		rabbitMQSender.sendRule(entity);
-		return "Message sent to the Kafka JavaInUse Successfully";
+		return "Message sent to the RabbitMQ JavaInUse Successfully";
 	}
 	
 	@ResponseStatus(HttpStatus.OK)
 	@PutMapping(value = "/rule/update")
 	public String updateRule(@RequestBody Entity entity) throws JsonProcessingException {
 		rabbitMQSender.sendRule(entity);
-		return "Message sent to the Kafka JavaInUse Successfully";
+		return "Message sent to the RabbitMQ JavaInUse Successfully";
 	}
 	
 	@ResponseStatus(HttpStatus.OK)
 	@DeleteMapping(value = "/rule/delete")
 	public String deleteRule(@RequestBody Entity entity) throws JsonProcessingException {
 		rabbitMQSender.sendRule(entity);
-		return "Message sent to the Kafka JavaInUse Successfully";
+		return "Message sent to the RabbitMQ JavaInUse Successfully";
 	}
 }
