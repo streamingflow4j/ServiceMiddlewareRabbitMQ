@@ -4,6 +4,8 @@ package com.producer.rabbit.service;
 
 import java.util.HashMap;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.AmqpAdmin;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.Queue;
@@ -27,6 +29,8 @@ public class RabbitMQSender {
 	
 	@Autowired
 	private ConnectionFactory connectionFactory;
+	
+	private static final Logger log = LoggerFactory.getLogger(RabbitMQSender.class);
 
 	private ObjectMapper objectMapper = new ObjectMapper();
 	
@@ -56,7 +60,7 @@ public class RabbitMQSender {
 	
 		rabbitTemplate.setMessageConverter(new SimpleMessageConverter());		
 		rabbitTemplate.convertAndSend(getEXCHANE(), queue, payload);
-		System.out.println("Send msg = " + entity.toString());
+		log.info("Send message: {}", entity.toString());
 	    
 	}
 	
