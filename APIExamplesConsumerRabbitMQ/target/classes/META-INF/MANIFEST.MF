@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: hdiniz
+Build-Jdk: 14.0.2
+Implementation-Title: SpringBootRabbitMQConsumer
+Implementation-Version: 0.0.1
+Implementation-Vendor-Id: com.example
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/SpringBootRabb
+ itMQConsumer/
+Created-By: Maven Integration for Eclipse
+
