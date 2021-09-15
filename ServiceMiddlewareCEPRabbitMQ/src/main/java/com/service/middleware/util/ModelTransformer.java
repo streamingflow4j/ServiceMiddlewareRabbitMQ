@@ -34,7 +34,7 @@ public class ModelTransformer  implements Serializable{
 			}
 			monitorEventHandler.createRequestMonitorExpression(myEntity);
 		} catch (Exception e) {
-            throw new RuntimeException(e.getMessage());
+			System.err.println("Não é permitido inserir Entidade! ====>>> "+ e.getMessage());
 		}
 		
 		return myEntity;
