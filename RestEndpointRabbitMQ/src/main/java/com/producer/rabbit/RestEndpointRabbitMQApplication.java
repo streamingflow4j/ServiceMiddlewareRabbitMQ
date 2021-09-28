@@ -4,10 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProducerRabbitMqApplication {
+public class RestEndpointRabbitMQApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProducerRabbitMqApplication.class, args);
+		//System.setProperty( "server.port","8082");
+		SpringApplication.run(RestEndpointRabbitMQApplication.class, args);
 	}
 
 }

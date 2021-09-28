@@ -1,0 +1,615 @@
+2021-09-17 17:13:57 INFO  MainServiceMiddlewareRabbitMQ:17 - Before Starting application
+2021-09-17 17:13:57 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@78186a70: startup date [Fri Sep 17 17:13:57 BRT 2021]; root of context hierarchy
+2021-09-17 17:13:58 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+2021-09-17 17:13:58 INFO  IntegrationRegistrar:315 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-09-17 17:13:59 INFO  DefaultConfiguringBeanFactoryPostProcessor:130 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-09-17 17:13:59 INFO  DefaultConfiguringBeanFactoryPostProcessor:154 - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2021-09-17 17:13:59 INFO  EPServiceProviderImpl:378 - Initializing engine URI 'default' version 6.1.0
+2021-09-17 17:14:01 INFO  ThreadPoolTaskScheduler:165 - Initializing ExecutorService  'taskScheduler'
+2021-09-17 17:14:02 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase -2147483648
+2021-09-17 17:14:02 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 0
+2021-09-17 17:14:02 INFO  EventDrivenConsumer:83 - Adding {service-activator} as a subscriber to the 'fromRabbit2' channel
+2021-09-17 17:14:02 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@78186a70.fromRabbit2' has 1 subscriber(s).
+2021-09-17 17:14:02 INFO  EventDrivenConsumer:97 - started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2021-09-17 17:14:02 INFO  EventDrivenConsumer:83 - Adding {transformer:MODEL} as a subscriber to the 'fromRabbit' channel
+2021-09-17 17:14:02 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@78186a70.fromRabbit' has 1 subscriber(s).
+2021-09-17 17:14:02 INFO  EventDrivenConsumer:97 - started MODEL
+2021-09-17 17:14:02 INFO  EventDrivenConsumer:83 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-09-17 17:14:02 INFO  PublishSubscribeChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@78186a70.errorChannel' has 1 subscriber(s).
+2021-09-17 17:14:02 INFO  EventDrivenConsumer:97 - started _org.springframework.integration.errorLogger
+2021-09-17 17:14:02 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 1073741823
+2021-09-17 17:14:03 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#0
+2021-09-17 17:14:03 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#1
+2021-09-17 17:14:03 INFO  MainServiceMiddlewareRabbitMQ:22 - Starting my application with 0 args.
+2021-09-17 17:14:57 INFO  MonitorEventHandler:224 - Add Event class =====> Termometer
+2021-09-17 17:15:42 INFO  MonitorEventHandler:94 - Runtime EPStatement Created 6869a409-992d-434b-9ff0-8b1277ae7af2 QUERY: select temperature from Termometer.win:time(5 sec)
+2021-09-17 17:15:52 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@27292367: startup date [Fri Sep 17 17:15:52 BRT 2021]; root of context hierarchy
+2021-09-17 17:15:52 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+2021-09-17 17:15:53 INFO  IntegrationRegistrar:315 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-09-17 17:15:53 INFO  DefaultConfiguringBeanFactoryPostProcessor:130 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-09-17 17:15:53 INFO  DefaultConfiguringBeanFactoryPostProcessor:154 - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2021-09-17 17:15:53 INFO  ThreadPoolTaskScheduler:165 - Initializing ExecutorService  'taskScheduler'
+2021-09-17 17:15:53 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase -2147483648
+2021-09-17 17:15:53 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 0
+2021-09-17 17:15:53 INFO  EventDrivenConsumer:83 - Adding {service-activator} as a subscriber to the 'fromRabbit2' channel
+2021-09-17 17:15:53 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@27292367.fromRabbit2' has 1 subscriber(s).
+2021-09-17 17:15:53 INFO  EventDrivenConsumer:97 - started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2021-09-17 17:15:53 INFO  EventDrivenConsumer:83 - Adding {transformer:MODEL} as a subscriber to the 'fromRabbit' channel
+2021-09-17 17:15:53 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@27292367.fromRabbit' has 1 subscriber(s).
+2021-09-17 17:15:53 INFO  EventDrivenConsumer:97 - started MODEL
+2021-09-17 17:15:53 INFO  EventDrivenConsumer:83 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-09-17 17:15:53 INFO  PublishSubscribeChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@27292367.errorChannel' has 1 subscriber(s).
+2021-09-17 17:15:53 INFO  EventDrivenConsumer:97 - started _org.springframework.integration.errorLogger
+2021-09-17 17:15:53 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 1073741823
+2021-09-17 17:15:53 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#0
+2021-09-17 17:15:53 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#1
+2021-09-17 17:30:57 INFO  MainServiceMiddlewareRabbitMQ:17 - Before Starting application
+2021-09-17 17:30:58 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@78186a70: startup date [Fri Sep 17 17:30:58 BRT 2021]; root of context hierarchy
+2021-09-17 17:30:58 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+2021-09-17 17:30:58 INFO  IntegrationRegistrar:315 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-09-17 17:30:58 INFO  DefaultConfiguringBeanFactoryPostProcessor:130 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-09-17 17:30:58 INFO  DefaultConfiguringBeanFactoryPostProcessor:154 - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2021-09-17 17:30:59 INFO  EPServiceProviderImpl:378 - Initializing engine URI 'default' version 6.1.0
+2021-09-17 17:30:59 INFO  ThreadPoolTaskScheduler:165 - Initializing ExecutorService  'taskScheduler'
+2021-09-17 17:31:00 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase -2147483648
+2021-09-17 17:31:00 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 0
+2021-09-17 17:31:00 INFO  EventDrivenConsumer:83 - Adding {service-activator} as a subscriber to the 'fromRabbit2' channel
+2021-09-17 17:31:00 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@78186a70.fromRabbit2' has 1 subscriber(s).
+2021-09-17 17:31:00 INFO  EventDrivenConsumer:97 - started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2021-09-17 17:31:00 INFO  EventDrivenConsumer:83 - Adding {transformer:MODEL} as a subscriber to the 'fromRabbit' channel
+2021-09-17 17:31:00 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@78186a70.fromRabbit' has 1 subscriber(s).
+2021-09-17 17:31:00 INFO  EventDrivenConsumer:97 - started MODEL
+2021-09-17 17:31:00 INFO  EventDrivenConsumer:83 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-09-17 17:31:00 INFO  PublishSubscribeChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@78186a70.errorChannel' has 1 subscriber(s).
+2021-09-17 17:31:00 INFO  EventDrivenConsumer:97 - started _org.springframework.integration.errorLogger
+2021-09-17 17:31:00 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 1073741823
+2021-09-17 17:31:00 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#0
+2021-09-17 17:31:00 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#1
+2021-09-17 17:31:00 INFO  MainServiceMiddlewareRabbitMQ:22 - Starting my application with 0 args.
+2021-09-17 17:34:30 INFO  MonitorEventHandler:224 - Add Event class =====> Termometer
+2021-09-17 17:34:33 INFO  MonitorEventHandler:94 - Runtime EPStatement Created ed95c710-cb2c-4704-97e5-2e0e1ca80348 QUERY: select temperature from Termometer.win:time(5 sec)
+2021-09-17 17:34:39 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5f5c7ad9: startup date [Fri Sep 17 17:34:39 BRT 2021]; root of context hierarchy
+2021-09-17 17:34:39 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+2021-09-17 17:34:39 INFO  IntegrationRegistrar:315 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-09-17 17:34:40 INFO  DefaultConfiguringBeanFactoryPostProcessor:130 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-09-17 17:34:40 INFO  DefaultConfiguringBeanFactoryPostProcessor:154 - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2021-09-17 17:34:40 INFO  ThreadPoolTaskScheduler:165 - Initializing ExecutorService  'taskScheduler'
+2021-09-17 17:34:40 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase -2147483648
+2021-09-17 17:34:40 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 0
+2021-09-17 17:34:40 INFO  EventDrivenConsumer:83 - Adding {service-activator} as a subscriber to the 'fromRabbit2' channel
+2021-09-17 17:34:40 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5f5c7ad9.fromRabbit2' has 1 subscriber(s).
+2021-09-17 17:34:40 INFO  EventDrivenConsumer:97 - started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2021-09-17 17:34:40 INFO  EventDrivenConsumer:83 - Adding {transformer:MODEL} as a subscriber to the 'fromRabbit' channel
+2021-09-17 17:34:40 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5f5c7ad9.fromRabbit' has 1 subscriber(s).
+2021-09-17 17:34:40 INFO  EventDrivenConsumer:97 - started MODEL
+2021-09-17 17:34:40 INFO  EventDrivenConsumer:83 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-09-17 17:34:40 INFO  PublishSubscribeChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@5f5c7ad9.errorChannel' has 1 subscriber(s).
+2021-09-17 17:34:40 INFO  EventDrivenConsumer:97 - started _org.springframework.integration.errorLogger
+2021-09-17 17:34:40 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 1073741823
+2021-09-17 17:34:40 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#0
+2021-09-17 17:34:40 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#1
+2021-09-17 17:37:51 INFO  MainServiceMiddlewareRabbitMQ:17 - Before Starting application
+2021-09-17 17:37:51 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@28ac3dc3: startup date [Fri Sep 17 17:37:51 BRT 2021]; root of context hierarchy
+2021-09-17 17:37:51 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+2021-09-17 17:37:51 INFO  IntegrationRegistrar:315 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-09-17 17:37:52 INFO  DefaultConfiguringBeanFactoryPostProcessor:130 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-09-17 17:37:52 INFO  DefaultConfiguringBeanFactoryPostProcessor:154 - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2021-09-17 17:37:52 INFO  EPServiceProviderImpl:378 - Initializing engine URI 'default' version 6.1.0
+2021-09-17 17:37:53 INFO  ThreadPoolTaskScheduler:165 - Initializing ExecutorService  'taskScheduler'
+2021-09-17 17:37:53 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase -2147483648
+2021-09-17 17:37:53 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 0
+2021-09-17 17:37:53 INFO  EventDrivenConsumer:83 - Adding {service-activator} as a subscriber to the 'fromRabbit2' channel
+2021-09-17 17:37:53 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@28ac3dc3.fromRabbit2' has 1 subscriber(s).
+2021-09-17 17:37:53 INFO  EventDrivenConsumer:97 - started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2021-09-17 17:37:53 INFO  EventDrivenConsumer:83 - Adding {transformer:MODEL} as a subscriber to the 'fromRabbit' channel
+2021-09-17 17:37:53 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@28ac3dc3.fromRabbit' has 1 subscriber(s).
+2021-09-17 17:37:53 INFO  EventDrivenConsumer:97 - started MODEL
+2021-09-17 17:37:53 INFO  EventDrivenConsumer:83 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-09-17 17:37:53 INFO  PublishSubscribeChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@28ac3dc3.errorChannel' has 1 subscriber(s).
+2021-09-17 17:37:53 INFO  EventDrivenConsumer:97 - started _org.springframework.integration.errorLogger
+2021-09-17 17:37:53 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 1073741823
+2021-09-17 17:37:54 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#0
+2021-09-17 17:37:54 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#1
+2021-09-17 17:37:54 INFO  MainServiceMiddlewareRabbitMQ:22 - Starting my application with 0 args.
+2021-09-17 17:38:32 INFO  MonitorEventHandler:224 - Add Event class =====> Termometer
+2021-09-17 17:38:35 INFO  MonitorEventHandler:94 - Runtime EPStatement Created ff7d6197-041d-476d-9fa2-95b841c572c0 QUERY: select temperature from Termometer.win:time(5 sec)
+2021-09-17 17:38:48 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@7bb1b1f3: startup date [Fri Sep 17 17:38:48 BRT 2021]; root of context hierarchy
+2021-09-17 17:38:48 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+2021-09-17 17:38:48 INFO  IntegrationRegistrar:315 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-09-17 17:38:48 INFO  DefaultConfiguringBeanFactoryPostProcessor:130 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-09-17 17:38:48 INFO  DefaultConfiguringBeanFactoryPostProcessor:154 - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2021-09-17 17:38:48 INFO  ThreadPoolTaskScheduler:165 - Initializing ExecutorService  'taskScheduler'
+2021-09-17 17:38:48 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase -2147483648
+2021-09-17 17:38:48 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 0
+2021-09-17 17:38:48 INFO  EventDrivenConsumer:83 - Adding {service-activator} as a subscriber to the 'fromRabbit2' channel
+2021-09-17 17:38:48 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@7bb1b1f3.fromRabbit2' has 1 subscriber(s).
+2021-09-17 17:38:48 INFO  EventDrivenConsumer:97 - started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2021-09-17 17:38:48 INFO  EventDrivenConsumer:83 - Adding {transformer:MODEL} as a subscriber to the 'fromRabbit' channel
+2021-09-17 17:38:48 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@7bb1b1f3.fromRabbit' has 1 subscriber(s).
+2021-09-17 17:38:48 INFO  EventDrivenConsumer:97 - started MODEL
+2021-09-17 17:38:48 INFO  EventDrivenConsumer:83 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-09-17 17:38:48 INFO  PublishSubscribeChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@7bb1b1f3.errorChannel' has 1 subscriber(s).
+2021-09-17 17:38:48 INFO  EventDrivenConsumer:97 - started _org.springframework.integration.errorLogger
+2021-09-17 17:38:48 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 1073741823
+2021-09-17 17:38:48 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#0
+2021-09-17 17:38:48 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#1
+2021-09-17 18:18:39 INFO  MainServiceMiddlewareRabbitMQ:17 - Before Starting application
+2021-09-17 18:18:39 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@78186a70: startup date [Fri Sep 17 18:18:39 BRT 2021]; root of context hierarchy
+2021-09-17 18:18:39 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+2021-09-17 18:18:39 INFO  IntegrationRegistrar:315 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-09-17 18:18:40 INFO  DefaultConfiguringBeanFactoryPostProcessor:130 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-09-17 18:18:40 INFO  DefaultConfiguringBeanFactoryPostProcessor:154 - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2021-09-17 18:18:40 INFO  EPServiceProviderImpl:378 - Initializing engine URI 'default' version 6.1.0
+2021-09-17 18:18:40 INFO  ThreadPoolTaskScheduler:165 - Initializing ExecutorService  'taskScheduler'
+2021-09-17 18:18:41 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase -2147483648
+2021-09-17 18:18:41 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 0
+2021-09-17 18:18:41 INFO  EventDrivenConsumer:83 - Adding {service-activator} as a subscriber to the 'fromRabbit2' channel
+2021-09-17 18:18:41 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@78186a70.fromRabbit2' has 1 subscriber(s).
+2021-09-17 18:18:41 INFO  EventDrivenConsumer:97 - started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2021-09-17 18:18:41 INFO  EventDrivenConsumer:83 - Adding {transformer:MODEL} as a subscriber to the 'fromRabbit' channel
+2021-09-17 18:18:41 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@78186a70.fromRabbit' has 1 subscriber(s).
+2021-09-17 18:18:41 INFO  EventDrivenConsumer:97 - started MODEL
+2021-09-17 18:18:41 INFO  EventDrivenConsumer:83 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-09-17 18:18:41 INFO  PublishSubscribeChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@78186a70.errorChannel' has 1 subscriber(s).
+2021-09-17 18:18:41 INFO  EventDrivenConsumer:97 - started _org.springframework.integration.errorLogger
+2021-09-17 18:18:41 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 1073741823
+2021-09-17 18:18:41 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#0
+2021-09-17 18:18:41 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#1
+2021-09-17 18:18:41 INFO  MainServiceMiddlewareRabbitMQ:22 - Starting my application with 0 args.
+2021-09-17 18:18:54 INFO  MonitorEventHandler:224 - Add Event class =====> Termometer
+2021-09-17 18:18:58 INFO  MonitorEventHandler:94 - Runtime EPStatement Created 1f54dd3e-2aea-4bf2-8324-2e836eea7d1b QUERY: select temperature from Termometer.win:time(5 sec)
+2021-09-17 18:19:01 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4c21fb36: startup date [Fri Sep 17 18:19:01 BRT 2021]; root of context hierarchy
+2021-09-17 18:19:01 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+2021-09-17 18:19:02 INFO  IntegrationRegistrar:315 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-09-17 18:19:02 INFO  DefaultConfiguringBeanFactoryPostProcessor:130 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-09-17 18:19:02 INFO  DefaultConfiguringBeanFactoryPostProcessor:154 - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2021-09-17 18:19:02 INFO  ThreadPoolTaskScheduler:165 - Initializing ExecutorService  'taskScheduler'
+2021-09-17 18:19:02 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase -2147483648
+2021-09-17 18:19:02 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 0
+2021-09-17 18:19:02 INFO  EventDrivenConsumer:83 - Adding {service-activator} as a subscriber to the 'fromRabbit2' channel
+2021-09-17 18:19:02 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@4c21fb36.fromRabbit2' has 1 subscriber(s).
+2021-09-17 18:19:02 INFO  EventDrivenConsumer:97 - started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2021-09-17 18:19:02 INFO  EventDrivenConsumer:83 - Adding {transformer:MODEL} as a subscriber to the 'fromRabbit' channel
+2021-09-17 18:19:02 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@4c21fb36.fromRabbit' has 1 subscriber(s).
+2021-09-17 18:19:02 INFO  EventDrivenConsumer:97 - started MODEL
+2021-09-17 18:19:02 INFO  EventDrivenConsumer:83 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-09-17 18:19:02 INFO  PublishSubscribeChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@4c21fb36.errorChannel' has 1 subscriber(s).
+2021-09-17 18:19:02 INFO  EventDrivenConsumer:97 - started _org.springframework.integration.errorLogger
+2021-09-17 18:19:02 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 1073741823
+2021-09-17 18:19:02 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#0
+2021-09-17 18:19:02 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#1
+2021-09-17 18:24:37 ERROR CachingConnectionFactory:249 - Channel shutdown: connection error; protocol method: #method<connection.close>(reply-code=320, reply-text=CONNECTION_FORCED - broker forced connection closure with reason 'shutdown', class-id=0, method-id=0)
+2021-09-17 18:24:37 ERROR CachingConnectionFactory:249 - Channel shutdown: connection error; protocol method: #method<connection.close>(reply-code=320, reply-text=CONNECTION_FORCED - broker forced connection closure with reason 'shutdown', class-id=0, method-id=0)
+2021-09-17 18:24:37 ERROR CachingConnectionFactory:249 - Channel shutdown: connection error; protocol method: #method<connection.close>(reply-code=320, reply-text=CONNECTION_FORCED - broker forced connection closure with reason 'shutdown', class-id=0, method-id=0)
+2021-09-17 18:24:37 ERROR CachingConnectionFactory:249 - Channel shutdown: connection error; protocol method: #method<connection.close>(reply-code=320, reply-text=CONNECTION_FORCED - broker forced connection closure with reason 'shutdown', class-id=0, method-id=0)
+2021-09-17 18:24:37 ERROR CachingConnectionFactory:249 - Channel shutdown: connection error; protocol method: #method<connection.close>(reply-code=320, reply-text=CONNECTION_FORCED - broker forced connection closure with reason 'shutdown', class-id=0, method-id=0)
+2021-09-17 18:24:37 ERROR CachingConnectionFactory:249 - Channel shutdown: connection error; protocol method: #method<connection.close>(reply-code=320, reply-text=CONNECTION_FORCED - broker forced connection closure with reason 'shutdown', class-id=0, method-id=0)
+2021-09-17 18:24:37 ERROR CachingConnectionFactory:249 - Channel shutdown: connection error; protocol method: #method<connection.close>(reply-code=320, reply-text=CONNECTION_FORCED - broker forced connection closure with reason 'shutdown', class-id=0, method-id=0)
+2021-09-17 18:24:37 ERROR CachingConnectionFactory:249 - Channel shutdown: connection error; protocol method: #method<connection.close>(reply-code=320, reply-text=CONNECTION_FORCED - broker forced connection closure with reason 'shutdown', class-id=0, method-id=0)
+2021-09-17 18:24:37 WARN  SimpleMessageListenerContainer:1182 - Consumer raised exception, processing can restart if the connection factory supports it
+com.rabbitmq.client.ShutdownSignalException: connection error; protocol method: #method<connection.close>(reply-code=320, reply-text=CONNECTION_FORCED - broker forced connection closure with reason 'shutdown', class-id=0, method-id=0)
+	at com.rabbitmq.client.impl.AMQConnection.startShutdown(AMQConnection.java:717)
+	at com.rabbitmq.client.impl.AMQConnection.shutdown(AMQConnection.java:707)
+	at com.rabbitmq.client.impl.AMQConnection.handleConnectionClose(AMQConnection.java:662)
+	at com.rabbitmq.client.impl.AMQConnection.processControlCommand(AMQConnection.java:617)
+	at com.rabbitmq.client.impl.AMQConnection$1.processAsync(AMQConnection.java:107)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:144)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:91)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:542)
+	at java.lang.Thread.run(Thread.java:748)
+2021-09-17 18:24:37 INFO  SimpleMessageListenerContainer:1173 - Restarting Consumer: tags=[[amq.ctag-QsReitHwdt8m5m-NO8PMbw]], channel=Cached Rabbit Channel: AMQChannel(amqp://user@127.0.0.1:5672vhostuser,2), acknowledgeMode=AUTO local queue size=0
+2021-09-17 18:24:37 ERROR SimpleMessageListenerContainer:914 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:54)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:207)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:394)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createBareChannel(CachingConnectionFactory.java:341)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getCachedChannelProxy(CachingConnectionFactory.java:315)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getChannel(CachingConnectionFactory.java:308)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.access$900(CachingConnectionFactory.java:74)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$ChannelCachingConnectionProxy.createChannel(CachingConnectionFactory.java:689)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$1.createChannel(ConnectionFactoryUtils.java:85)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:134)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:67)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:952)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:945)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:921)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:254)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.redeclareElementsIfNecessary(SimpleMessageListenerContainer.java:901)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$300(SimpleMessageListenerContainer.java:82)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1020)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.rabbitmq.client.impl.FrameHandlerFactory.create(FrameHandlerFactory.java:32)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:615)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:651)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:203)
+	... 17 more
+2021-09-17 18:24:37 WARN  SimpleMessageListenerContainer:1182 - Consumer raised exception, processing can restart if the connection factory supports it
+com.rabbitmq.client.ShutdownSignalException: connection error; protocol method: #method<connection.close>(reply-code=320, reply-text=CONNECTION_FORCED - broker forced connection closure with reason 'shutdown', class-id=0, method-id=0)
+	at com.rabbitmq.client.impl.AMQConnection.startShutdown(AMQConnection.java:717)
+	at com.rabbitmq.client.impl.AMQConnection.shutdown(AMQConnection.java:707)
+	at com.rabbitmq.client.impl.AMQConnection.handleConnectionClose(AMQConnection.java:662)
+	at com.rabbitmq.client.impl.AMQConnection.processControlCommand(AMQConnection.java:617)
+	at com.rabbitmq.client.impl.AMQConnection$1.processAsync(AMQConnection.java:107)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:144)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:91)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:542)
+	at java.lang.Thread.run(Thread.java:748)
+2021-09-17 18:24:37 INFO  SimpleMessageListenerContainer:1173 - Restarting Consumer: tags=[[amq.ctag-89nx-llW7PBOtF6ABWElIQ]], channel=Cached Rabbit Channel: AMQChannel(amqp://user@127.0.0.1:5672vhostuser,2), acknowledgeMode=AUTO local queue size=0
+2021-09-17 18:24:37 ERROR SimpleMessageListenerContainer:914 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:54)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:207)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:394)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createBareChannel(CachingConnectionFactory.java:341)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getCachedChannelProxy(CachingConnectionFactory.java:315)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getChannel(CachingConnectionFactory.java:308)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.access$900(CachingConnectionFactory.java:74)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$ChannelCachingConnectionProxy.createChannel(CachingConnectionFactory.java:689)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$1.createChannel(ConnectionFactoryUtils.java:85)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:134)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:67)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:952)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:945)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:921)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:254)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.redeclareElementsIfNecessary(SimpleMessageListenerContainer.java:901)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$300(SimpleMessageListenerContainer.java:82)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1020)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.rabbitmq.client.impl.FrameHandlerFactory.create(FrameHandlerFactory.java:32)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:615)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:651)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:203)
+	... 17 more
+2021-09-17 18:24:38 WARN  SimpleMessageListenerContainer:1182 - Consumer raised exception, processing can restart if the connection factory supports it
+com.rabbitmq.client.ShutdownSignalException: connection error; protocol method: #method<connection.close>(reply-code=320, reply-text=CONNECTION_FORCED - broker forced connection closure with reason 'shutdown', class-id=0, method-id=0)
+	at com.rabbitmq.client.impl.AMQConnection.startShutdown(AMQConnection.java:717)
+	at com.rabbitmq.client.impl.AMQConnection.shutdown(AMQConnection.java:707)
+	at com.rabbitmq.client.impl.AMQConnection.handleConnectionClose(AMQConnection.java:662)
+	at com.rabbitmq.client.impl.AMQConnection.processControlCommand(AMQConnection.java:617)
+	at com.rabbitmq.client.impl.AMQConnection$1.processAsync(AMQConnection.java:107)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:144)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:91)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:542)
+	at java.lang.Thread.run(Thread.java:748)
+2021-09-17 18:24:38 INFO  SimpleMessageListenerContainer:1173 - Restarting Consumer: tags=[[amq.ctag-vL_2JDmEoU76ChvXjz7jEg]], channel=Cached Rabbit Channel: AMQChannel(amqp://user@127.0.0.1:5672vhostuser,1), acknowledgeMode=AUTO local queue size=0
+2021-09-17 18:24:38 ERROR SimpleMessageListenerContainer:914 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:54)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:207)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:394)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$1.createConnection(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:130)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:67)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:952)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:945)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:921)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:254)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.redeclareElementsIfNecessary(SimpleMessageListenerContainer.java:901)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$300(SimpleMessageListenerContainer.java:82)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1020)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.rabbitmq.client.impl.FrameHandlerFactory.create(FrameHandlerFactory.java:32)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:615)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:651)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:203)
+	... 12 more
+2021-09-17 18:24:38 WARN  SimpleMessageListenerContainer:1182 - Consumer raised exception, processing can restart if the connection factory supports it
+com.rabbitmq.client.ShutdownSignalException: connection error; protocol method: #method<connection.close>(reply-code=320, reply-text=CONNECTION_FORCED - broker forced connection closure with reason 'shutdown', class-id=0, method-id=0)
+	at com.rabbitmq.client.impl.AMQConnection.startShutdown(AMQConnection.java:717)
+	at com.rabbitmq.client.impl.AMQConnection.shutdown(AMQConnection.java:707)
+	at com.rabbitmq.client.impl.AMQConnection.handleConnectionClose(AMQConnection.java:662)
+	at com.rabbitmq.client.impl.AMQConnection.processControlCommand(AMQConnection.java:617)
+	at com.rabbitmq.client.impl.AMQConnection$1.processAsync(AMQConnection.java:107)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:144)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:91)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:542)
+	at java.lang.Thread.run(Thread.java:748)
+2021-09-17 18:24:38 WARN  SimpleMessageListenerContainer:1182 - Consumer raised exception, processing can restart if the connection factory supports it
+com.rabbitmq.client.ShutdownSignalException: connection error; protocol method: #method<connection.close>(reply-code=320, reply-text=CONNECTION_FORCED - broker forced connection closure with reason 'shutdown', class-id=0, method-id=0)
+	at com.rabbitmq.client.impl.AMQConnection.startShutdown(AMQConnection.java:717)
+	at com.rabbitmq.client.impl.AMQConnection.shutdown(AMQConnection.java:707)
+	at com.rabbitmq.client.impl.AMQConnection.handleConnectionClose(AMQConnection.java:662)
+	at com.rabbitmq.client.impl.AMQConnection.processControlCommand(AMQConnection.java:617)
+	at com.rabbitmq.client.impl.AMQConnection$1.processAsync(AMQConnection.java:107)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:144)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:91)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:542)
+	at java.lang.Thread.run(Thread.java:748)
+2021-09-17 18:24:38 INFO  SimpleMessageListenerContainer:1173 - Restarting Consumer: tags=[[amq.ctag-WFf1hPebTIOIN9r5uRYdnQ]], channel=Cached Rabbit Channel: AMQChannel(amqp://user@127.0.0.1:5672vhostuser,2), acknowledgeMode=AUTO local queue size=0
+2021-09-17 18:24:38 WARN  SimpleMessageListenerContainer:1182 - Consumer raised exception, processing can restart if the connection factory supports it
+com.rabbitmq.client.ShutdownSignalException: connection error; protocol method: #method<connection.close>(reply-code=320, reply-text=CONNECTION_FORCED - broker forced connection closure with reason 'shutdown', class-id=0, method-id=0)
+	at com.rabbitmq.client.impl.AMQConnection.startShutdown(AMQConnection.java:717)
+	at com.rabbitmq.client.impl.AMQConnection.shutdown(AMQConnection.java:707)
+	at com.rabbitmq.client.impl.AMQConnection.handleConnectionClose(AMQConnection.java:662)
+	at com.rabbitmq.client.impl.AMQConnection.processControlCommand(AMQConnection.java:617)
+	at com.rabbitmq.client.impl.AMQConnection$1.processAsync(AMQConnection.java:107)
+	at com.rabbitmq.client.impl.AMQChannel.handleCompleteInboundCommand(AMQChannel.java:144)
+	at com.rabbitmq.client.impl.AMQChannel.handleFrame(AMQChannel.java:91)
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:542)
+	at java.lang.Thread.run(Thread.java:748)
+2021-09-17 18:24:38 INFO  SimpleMessageListenerContainer:1173 - Restarting Consumer: tags=[[amq.ctag-4FtaVXC3efCaLPRbFNeROQ]], channel=Cached Rabbit Channel: AMQChannel(amqp://user@127.0.0.1:5672vhostuser,1), acknowledgeMode=AUTO local queue size=0
+2021-09-17 18:24:38 INFO  SimpleMessageListenerContainer:1173 - Restarting Consumer: tags=[[amq.ctag-aKTuhQAtJRjwj9kkkS9Npw]], channel=Cached Rabbit Channel: AMQChannel(amqp://user@127.0.0.1:5672vhostuser,1), acknowledgeMode=AUTO local queue size=0
+2021-09-17 18:24:38 ERROR SimpleMessageListenerContainer:914 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:54)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:207)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:394)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createBareChannel(CachingConnectionFactory.java:341)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getCachedChannelProxy(CachingConnectionFactory.java:315)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getChannel(CachingConnectionFactory.java:308)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.access$900(CachingConnectionFactory.java:74)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$ChannelCachingConnectionProxy.createChannel(CachingConnectionFactory.java:689)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$1.createChannel(ConnectionFactoryUtils.java:85)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:134)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:67)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:952)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:945)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:921)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:254)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.redeclareElementsIfNecessary(SimpleMessageListenerContainer.java:901)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$300(SimpleMessageListenerContainer.java:82)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1020)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.rabbitmq.client.impl.FrameHandlerFactory.create(FrameHandlerFactory.java:32)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:615)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:651)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:203)
+	... 17 more
+2021-09-17 18:24:38 ERROR SimpleMessageListenerContainer:914 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:54)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:207)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:394)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$1.createConnection(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:130)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:67)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:952)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:945)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:921)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:254)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.redeclareElementsIfNecessary(SimpleMessageListenerContainer.java:901)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$300(SimpleMessageListenerContainer.java:82)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1020)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.rabbitmq.client.impl.FrameHandlerFactory.create(FrameHandlerFactory.java:32)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:615)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:651)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:203)
+	... 12 more
+2021-09-17 18:24:38 ERROR SimpleMessageListenerContainer:914 - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection refused (Connection refused)
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:54)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:207)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:394)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils$1.createConnection(ConnectionFactoryUtils.java:80)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.doGetTransactionalResourceHolder(ConnectionFactoryUtils.java:130)
+	at org.springframework.amqp.rabbit.connection.ConnectionFactoryUtils.getTransactionalResourceHolder(ConnectionFactoryUtils.java:67)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:952)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:945)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:921)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:254)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.redeclareElementsIfNecessary(SimpleMessageListenerContainer.java:901)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.access$300(SimpleMessageListenerContainer.java:82)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1020)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.rabbitmq.client.impl.FrameHandlerFactory.create(FrameHandlerFactory.java:32)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:615)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:651)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:203)
+	... 12 more
+2021-09-17 18:24:41 INFO  ClassPathXmlApplicationContext:862 - Closing org.springframework.context.support.ClassPathXmlApplicationContext@7bb1b1f3: startup date [Fri Sep 17 17:38:48 BRT 2021]; root of context hierarchy
+2021-09-17 18:24:41 INFO  ClassPathXmlApplicationContext:862 - Closing org.springframework.context.support.ClassPathXmlApplicationContext@28ac3dc3: startup date [Fri Sep 17 17:37:51 BRT 2021]; root of context hierarchy
+2021-09-17 18:24:41 INFO  ClassPathXmlApplicationContext:862 - Closing org.springframework.context.support.ClassPathXmlApplicationContext@4c21fb36: startup date [Fri Sep 17 18:19:01 BRT 2021]; root of context hierarchy
+2021-09-17 18:24:41 INFO  DefaultLifecycleProcessor:356 - Stopping beans in phase 1073741823
+2021-09-17 18:24:41 INFO  DefaultLifecycleProcessor:356 - Stopping beans in phase 1073741823
+2021-09-17 18:24:41 INFO  DefaultLifecycleProcessor:356 - Stopping beans in phase 1073741823
+2021-09-17 18:24:41 INFO  SimpleMessageListenerContainer:697 - Waiting for workers to finish.
+2021-09-17 18:24:41 INFO  SimpleMessageListenerContainer:697 - Waiting for workers to finish.
+2021-09-17 18:24:41 INFO  SimpleMessageListenerContainer:700 - Successfully waited for workers to finish.
+2021-09-17 18:24:41 INFO  SimpleMessageListenerContainer:697 - Waiting for workers to finish.
+2021-09-17 18:24:41 INFO  AmqpInboundChannelAdapter:131 - stopped org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#0
+2021-09-17 18:24:41 INFO  SimpleMessageListenerContainer:700 - Successfully waited for workers to finish.
+2021-09-17 18:24:41 INFO  SimpleMessageListenerContainer:697 - Waiting for workers to finish.
+2021-09-17 18:24:41 INFO  SimpleMessageListenerContainer:700 - Successfully waited for workers to finish.
+2021-09-17 18:24:41 INFO  SimpleMessageListenerContainer:700 - Successfully waited for workers to finish.
+2021-09-17 18:24:41 INFO  AmqpInboundChannelAdapter:131 - stopped org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#0
+2021-09-17 18:24:41 INFO  AmqpInboundChannelAdapter:131 - stopped org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#1
+2021-09-17 18:24:41 INFO  AmqpInboundChannelAdapter:131 - stopped org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#0
+2021-09-17 18:24:41 INFO  DefaultLifecycleProcessor:356 - Stopping beans in phase 0
+2021-09-17 18:24:41 INFO  SimpleMessageListenerContainer:697 - Waiting for workers to finish.
+2021-09-17 18:24:41 INFO  EventDrivenConsumer:83 - Removing {service-activator} as a subscriber to the 'fromRabbit2' channel
+2021-09-17 18:24:41 INFO  SimpleMessageListenerContainer:697 - Waiting for workers to finish.
+2021-09-17 18:24:41 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@7bb1b1f3.fromRabbit2' has 0 subscriber(s).
+2021-09-17 18:24:41 INFO  SimpleMessageListenerContainer:700 - Successfully waited for workers to finish.
+2021-09-17 18:24:41 INFO  EventDrivenConsumer:131 - stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2021-09-17 18:24:41 INFO  SimpleMessageListenerContainer:700 - Successfully waited for workers to finish.
+2021-09-17 18:24:42 INFO  EventDrivenConsumer:83 - Removing {transformer:MODEL} as a subscriber to the 'fromRabbit' channel
+2021-09-17 18:24:41 INFO  AmqpInboundChannelAdapter:131 - stopped org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#1
+2021-09-17 18:24:42 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@7bb1b1f3.fromRabbit' has 0 subscriber(s).
+2021-09-17 18:24:42 INFO  AmqpInboundChannelAdapter:131 - stopped org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#1
+2021-09-17 18:24:42 INFO  EventDrivenConsumer:131 - stopped MODEL
+2021-09-17 18:24:42 INFO  DefaultLifecycleProcessor:356 - Stopping beans in phase 0
+2021-09-17 18:24:42 INFO  EventDrivenConsumer:83 - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-09-17 18:24:42 INFO  DefaultLifecycleProcessor:356 - Stopping beans in phase 0
+2021-09-17 18:24:42 INFO  PublishSubscribeChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@7bb1b1f3.errorChannel' has 0 subscriber(s).
+2021-09-17 18:24:42 INFO  EventDrivenConsumer:83 - Removing {service-activator} as a subscriber to the 'fromRabbit2' channel
+2021-09-17 18:24:42 INFO  EventDrivenConsumer:131 - stopped _org.springframework.integration.errorLogger
+2021-09-17 18:24:42 INFO  EventDrivenConsumer:83 - Removing {service-activator} as a subscriber to the 'fromRabbit2' channel
+2021-09-17 18:24:42 INFO  DefaultLifecycleProcessor:356 - Stopping beans in phase -2147483648
+2021-09-17 18:24:42 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@28ac3dc3.fromRabbit2' has 0 subscriber(s).
+2021-09-17 18:24:42 INFO  EventDrivenConsumer:131 - stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2021-09-17 18:24:42 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@4c21fb36.fromRabbit2' has 0 subscriber(s).
+2021-09-17 18:24:42 INFO  EventDrivenConsumer:83 - Removing {transformer:MODEL} as a subscriber to the 'fromRabbit' channel
+2021-09-17 18:24:42 INFO  EventDrivenConsumer:131 - stopped org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2021-09-17 18:24:42 INFO  ThreadPoolTaskScheduler:203 - Shutting down ExecutorService 'taskScheduler'
+2021-09-17 18:24:42 INFO  EventDrivenConsumer:83 - Removing {transformer:MODEL} as a subscriber to the 'fromRabbit' channel
+2021-09-17 18:24:42 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@28ac3dc3.fromRabbit' has 0 subscriber(s).
+2021-09-17 18:24:42 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@4c21fb36.fromRabbit' has 0 subscriber(s).
+2021-09-17 18:24:42 INFO  EventDrivenConsumer:131 - stopped MODEL
+2021-09-17 18:24:42 INFO  EventDrivenConsumer:131 - stopped MODEL
+2021-09-17 18:24:42 INFO  EventDrivenConsumer:83 - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-09-17 18:24:42 INFO  EventDrivenConsumer:83 - Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-09-17 18:24:42 INFO  PublishSubscribeChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@28ac3dc3.errorChannel' has 0 subscriber(s).
+2021-09-17 18:24:42 INFO  PublishSubscribeChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@4c21fb36.errorChannel' has 0 subscriber(s).
+2021-09-17 18:24:42 INFO  EventDrivenConsumer:131 - stopped _org.springframework.integration.errorLogger
+2021-09-17 18:24:42 INFO  EventDrivenConsumer:131 - stopped _org.springframework.integration.errorLogger
+2021-09-17 18:24:42 INFO  DefaultLifecycleProcessor:356 - Stopping beans in phase -2147483648
+2021-09-17 18:24:42 INFO  DefaultLifecycleProcessor:356 - Stopping beans in phase -2147483648
+2021-09-17 18:24:42 INFO  ThreadPoolTaskScheduler:203 - Shutting down ExecutorService 'taskScheduler'
+2021-09-17 18:24:42 INFO  ThreadPoolTaskScheduler:203 - Shutting down ExecutorService 'taskScheduler'
+2021-09-17 18:28:10 INFO  MainServiceMiddlewareRabbitMQ:17 - Before Starting application
+2021-09-17 18:28:10 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@78186a70: startup date [Fri Sep 17 18:28:10 BRT 2021]; root of context hierarchy
+2021-09-17 18:28:11 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+2021-09-17 18:28:12 INFO  IntegrationRegistrar:315 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-09-17 18:28:12 INFO  DefaultConfiguringBeanFactoryPostProcessor:130 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-09-17 18:28:12 INFO  DefaultConfiguringBeanFactoryPostProcessor:154 - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2021-09-17 18:28:13 INFO  EPServiceProviderImpl:378 - Initializing engine URI 'default' version 6.1.0
+2021-09-17 18:28:15 INFO  ThreadPoolTaskScheduler:165 - Initializing ExecutorService  'taskScheduler'
+2021-09-17 18:28:16 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase -2147483648
+2021-09-17 18:28:16 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 0
+2021-09-17 18:28:16 INFO  EventDrivenConsumer:83 - Adding {service-activator} as a subscriber to the 'fromRabbit2' channel
+2021-09-17 18:28:16 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@78186a70.fromRabbit2' has 1 subscriber(s).
+2021-09-17 18:28:16 INFO  EventDrivenConsumer:97 - started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2021-09-17 18:28:16 INFO  EventDrivenConsumer:83 - Adding {transformer:MODEL} as a subscriber to the 'fromRabbit' channel
+2021-09-17 18:28:16 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@78186a70.fromRabbit' has 1 subscriber(s).
+2021-09-17 18:28:16 INFO  EventDrivenConsumer:97 - started MODEL
+2021-09-17 18:28:16 INFO  EventDrivenConsumer:83 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-09-17 18:28:16 INFO  PublishSubscribeChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@78186a70.errorChannel' has 1 subscriber(s).
+2021-09-17 18:28:16 INFO  EventDrivenConsumer:97 - started _org.springframework.integration.errorLogger
+2021-09-17 18:28:16 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 1073741823
+2021-09-17 18:28:17 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#0
+2021-09-17 18:28:17 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#1
+2021-09-17 18:28:17 INFO  MainServiceMiddlewareRabbitMQ:22 - Starting my application with 0 args.
+2021-09-17 18:30:32 INFO  MonitorEventHandler:224 - Add Event class =====> Termometer
+2021-09-17 18:30:39 INFO  MonitorEventHandler:94 - Runtime EPStatement Created ff21f7fa-288b-4073-9306-e0b17ad2a339 QUERY: select temperature from Termometer.win:time(5 sec)
+2021-09-17 18:30:48 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@78a29ff9: startup date [Fri Sep 17 18:30:48 BRT 2021]; root of context hierarchy
+2021-09-17 18:30:48 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+2021-09-17 18:30:49 INFO  IntegrationRegistrar:315 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-09-17 18:30:49 INFO  DefaultConfiguringBeanFactoryPostProcessor:130 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-09-17 18:30:49 INFO  DefaultConfiguringBeanFactoryPostProcessor:154 - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2021-09-17 18:30:49 INFO  ThreadPoolTaskScheduler:165 - Initializing ExecutorService  'taskScheduler'
+2021-09-17 18:30:49 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase -2147483648
+2021-09-17 18:30:49 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 0
+2021-09-17 18:30:49 INFO  EventDrivenConsumer:83 - Adding {service-activator} as a subscriber to the 'fromRabbit2' channel
+2021-09-17 18:30:49 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@78a29ff9.fromRabbit2' has 1 subscriber(s).
+2021-09-17 18:30:49 INFO  EventDrivenConsumer:97 - started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2021-09-17 18:30:49 INFO  EventDrivenConsumer:83 - Adding {transformer:MODEL} as a subscriber to the 'fromRabbit' channel
+2021-09-17 18:30:49 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@78a29ff9.fromRabbit' has 1 subscriber(s).
+2021-09-17 18:30:49 INFO  EventDrivenConsumer:97 - started MODEL
+2021-09-17 18:30:49 INFO  EventDrivenConsumer:83 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-09-17 18:30:49 INFO  PublishSubscribeChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@78a29ff9.errorChannel' has 1 subscriber(s).
+2021-09-17 18:30:49 INFO  EventDrivenConsumer:97 - started _org.springframework.integration.errorLogger
+2021-09-17 18:30:49 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 1073741823
+2021-09-17 18:30:49 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#0
+2021-09-17 18:30:49 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#1
+2021-09-17 18:43:35 INFO  MonitorEventHandler:224 - Add Event class =====> Termometer
+2021-09-17 18:43:41 INFO  MonitorEventHandler:94 - Runtime EPStatement Created ef1fbc9b-c1d8-45d7-8e0d-1ca6dae81ab2 QUERY: select temperature from Termometer.win:time(5 sec)
+2021-09-17 18:43:45 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4500a55d: startup date [Fri Sep 17 18:43:45 BRT 2021]; root of context hierarchy
+2021-09-17 18:43:45 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+2021-09-17 18:43:45 INFO  IntegrationRegistrar:315 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-09-17 18:43:45 INFO  DefaultConfiguringBeanFactoryPostProcessor:130 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-09-17 18:43:45 INFO  DefaultConfiguringBeanFactoryPostProcessor:154 - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2021-09-17 18:43:45 INFO  ThreadPoolTaskScheduler:165 - Initializing ExecutorService  'taskScheduler'
+2021-09-17 18:43:45 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase -2147483648
+2021-09-17 18:43:45 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 0
+2021-09-17 18:43:45 INFO  EventDrivenConsumer:83 - Adding {service-activator} as a subscriber to the 'fromRabbit2' channel
+2021-09-17 18:43:45 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@4500a55d.fromRabbit2' has 1 subscriber(s).
+2021-09-17 18:43:45 INFO  EventDrivenConsumer:97 - started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2021-09-17 18:43:45 INFO  EventDrivenConsumer:83 - Adding {transformer:MODEL} as a subscriber to the 'fromRabbit' channel
+2021-09-17 18:43:45 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@4500a55d.fromRabbit' has 1 subscriber(s).
+2021-09-17 18:43:45 INFO  EventDrivenConsumer:97 - started MODEL
+2021-09-17 18:43:45 INFO  EventDrivenConsumer:83 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-09-17 18:43:45 INFO  PublishSubscribeChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@4500a55d.errorChannel' has 1 subscriber(s).
+2021-09-17 18:43:45 INFO  EventDrivenConsumer:97 - started _org.springframework.integration.errorLogger
+2021-09-17 18:43:45 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 1073741823
+2021-09-17 18:43:45 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#0
+2021-09-17 18:43:45 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#1
+2021-09-17 18:44:42 INFO  MainServiceMiddlewareRabbitMQ:17 - Before Starting application
+2021-09-17 18:44:42 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@28ac3dc3: startup date [Fri Sep 17 18:44:42 BRT 2021]; root of context hierarchy
+2021-09-17 18:44:42 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+2021-09-17 18:44:43 INFO  IntegrationRegistrar:315 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-09-17 18:44:43 INFO  DefaultConfiguringBeanFactoryPostProcessor:130 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-09-17 18:44:43 INFO  DefaultConfiguringBeanFactoryPostProcessor:154 - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2021-09-17 18:44:43 INFO  EPServiceProviderImpl:378 - Initializing engine URI 'default' version 6.1.0
+2021-09-17 18:44:44 INFO  ThreadPoolTaskScheduler:165 - Initializing ExecutorService  'taskScheduler'
+2021-09-17 18:44:45 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase -2147483648
+2021-09-17 18:44:45 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 0
+2021-09-17 18:44:45 INFO  EventDrivenConsumer:83 - Adding {service-activator} as a subscriber to the 'fromRabbit2' channel
+2021-09-17 18:44:45 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@28ac3dc3.fromRabbit2' has 1 subscriber(s).
+2021-09-17 18:44:45 INFO  EventDrivenConsumer:97 - started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2021-09-17 18:44:45 INFO  EventDrivenConsumer:83 - Adding {transformer:MODEL} as a subscriber to the 'fromRabbit' channel
+2021-09-17 18:44:45 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@28ac3dc3.fromRabbit' has 1 subscriber(s).
+2021-09-17 18:44:45 INFO  EventDrivenConsumer:97 - started MODEL
+2021-09-17 18:44:45 INFO  EventDrivenConsumer:83 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-09-17 18:44:45 INFO  PublishSubscribeChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@28ac3dc3.errorChannel' has 1 subscriber(s).
+2021-09-17 18:44:45 INFO  EventDrivenConsumer:97 - started _org.springframework.integration.errorLogger
+2021-09-17 18:44:45 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 1073741823
+2021-09-17 18:44:45 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#0
+2021-09-17 18:44:45 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#1
+2021-09-17 18:44:45 INFO  MainServiceMiddlewareRabbitMQ:22 - Starting my application with 0 args.
+2021-09-17 18:45:04 INFO  MonitorEventHandler:224 - Add Event class =====> Termometer
+2021-09-17 18:45:10 INFO  MonitorEventHandler:94 - Runtime EPStatement Created a3155b9c-a47b-4317-a1b4-c82d81d627fa QUERY: select temperature from Termometer.win:time(5 sec)
+2021-09-17 18:45:14 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@3a3069f7: startup date [Fri Sep 17 18:45:14 BRT 2021]; root of context hierarchy
+2021-09-17 18:45:14 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+2021-09-17 18:45:14 INFO  IntegrationRegistrar:315 - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-09-17 18:45:14 INFO  DefaultConfiguringBeanFactoryPostProcessor:130 - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-09-17 18:45:14 INFO  DefaultConfiguringBeanFactoryPostProcessor:154 - No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2021-09-17 18:45:14 INFO  ThreadPoolTaskScheduler:165 - Initializing ExecutorService  'taskScheduler'
+2021-09-17 18:45:14 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase -2147483648
+2021-09-17 18:45:14 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 0
+2021-09-17 18:45:14 INFO  EventDrivenConsumer:83 - Adding {service-activator} as a subscriber to the 'fromRabbit2' channel
+2021-09-17 18:45:14 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@3a3069f7.fromRabbit2' has 1 subscriber(s).
+2021-09-17 18:45:14 INFO  EventDrivenConsumer:97 - started org.springframework.integration.config.ConsumerEndpointFactoryBean#0
+2021-09-17 18:45:14 INFO  EventDrivenConsumer:83 - Adding {transformer:MODEL} as a subscriber to the 'fromRabbit' channel
+2021-09-17 18:45:14 INFO  DirectChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@3a3069f7.fromRabbit' has 1 subscriber(s).
+2021-09-17 18:45:14 INFO  EventDrivenConsumer:97 - started MODEL
+2021-09-17 18:45:14 INFO  EventDrivenConsumer:83 - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-09-17 18:45:14 INFO  PublishSubscribeChannel:69 - Channel 'org.springframework.context.support.ClassPathXmlApplicationContext@3a3069f7.errorChannel' has 1 subscriber(s).
+2021-09-17 18:45:14 INFO  EventDrivenConsumer:97 - started _org.springframework.integration.errorLogger
+2021-09-17 18:45:14 INFO  DefaultLifecycleProcessor:341 - Starting beans in phase 1073741823
+2021-09-17 18:45:14 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#0
+2021-09-17 18:45:14 INFO  AmqpInboundChannelAdapter:97 - started org.springframework.integration.amqp.inbound.AmqpInboundChannelAdapter#1

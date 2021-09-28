@@ -74,11 +74,11 @@ public class RabbitMQSender {
 	}
 
 	public String getQUEUE_DATA() {
-		return load("spring.rabbitmq.data.queue");
+		return load("queue.streaming.data");
 		
 	}
 
 	public String getQUEUE_RULE() {
-		return load("spring.rabbitmq.rule.queue");		
+		return load("queue.rule.cep");		
 	}
 }
