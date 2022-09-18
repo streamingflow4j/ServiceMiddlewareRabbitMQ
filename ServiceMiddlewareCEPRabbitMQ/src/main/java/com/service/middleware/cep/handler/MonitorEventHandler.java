@@ -220,7 +220,7 @@ public class MonitorEventHandler implements InitializingBean {
 		}	   	    
 		final Class<?> beanClass = createBeanClass(className, properties);
 	    Object myBean = cHM.get(className);
-	    epService.getEPAdministrator().getConfiguration().addEventType(myBean.getClass());
+	    epService.getEPAdministrator().getConfiguration().addEventType(className, myBean.getClass());
 	    logger.info("Add Event class =====> " + className);
 	}
 	
