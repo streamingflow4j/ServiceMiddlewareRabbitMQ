@@ -1,0 +1,9 @@
+2023-03-07 09:15:54 INFO  MainServiceMiddlewareRabbitMQ:17 - Before Starting application
+2023-03-07 09:15:54 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@24b1d79b: startup date [Tue Mar 07 09:15:54 BRT 2023]; root of context hierarchy
+2023-03-07 09:15:55 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+2023-03-07 09:16:42 INFO  MainServiceMiddlewareRabbitMQ:17 - Before Starting application
+2023-03-07 09:16:42 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@52525845: startup date [Tue Mar 07 09:16:42 BRT 2023]; root of context hierarchy
+2023-03-07 09:16:42 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]
+2023-03-07 21:34:21 INFO  MainServiceMiddlewareRabbitMQ:17 - Before Starting application
+2023-03-07 21:34:21 INFO  ClassPathXmlApplicationContext:510 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@52525845: startup date [Tue Mar 07 21:34:21 BRT 2023]; root of context hierarchy
+2023-03-07 21:34:21 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [applicationContext.xml]

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ServiceMiddlewareCEP</groupId>
   <artifactId>ServiceMiddlewareCEP</artifactId>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>Consumer1 Maven Webapp</name>
   <url>http://maven.apache.org</url>
@@ -142,7 +142,7 @@
           <archive>
             <manifest>
               <addClasspath>true</addClasspath>
-              <mainClass>com.service.middleware.main.Main</mainClass>
+              <mainClass>com.service.middleware.main.MainServiceMiddlewareRabbitMQ</mainClass>
             </manifest>
           </archive>
         </configuration>

@@ -1,0 +1,160 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ServiceMiddlewareCEP</groupId>
+  <artifactId>ServiceMiddlewareCEP</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Consumer1 Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  	<properties>
+		<spring.integration.version>4.1.0.RELEASE</spring.integration.version>
+		<log4j.version>1.2.17</log4j.version>
+		<junit.version>4.10</junit.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+  
+  <dependencies>
+  
+  	<!-- Spring Integration -->
+	<dependency>
+		<groupId>org.springframework.integration</groupId>
+		<artifactId>spring-integration-amqp</artifactId>
+		<version>${spring.integration.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.integration</groupId>
+		<artifactId>spring-integration-stream</artifactId>
+		<version>${spring.integration.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.integration</groupId>
+		<artifactId>spring-integration-core</artifactId>
+		<version>${spring.integration.version}</version>
+	</dependency>
+	
+	<dependency>
+      <groupId>org.springframework.retry</groupId>
+      <artifactId>spring-retry</artifactId>
+      <version>1.2.4.RELEASE</version>
+    </dependency>
+    
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>4.1.1.RELEASE</version>
+      <scope>test</scope>
+    </dependency>
+    
+    <!-- Esper -->
+	<!-- https://mvnrepository.com/artifact/com.espertech/esper -->
+	<dependency>
+	    <groupId>com.espertech</groupId>
+	    <artifactId>esper</artifactId>
+	    <version>6.1.0</version>
+	</dependency>
+
+	
+	<!-- https://mvnrepository.com/artifact/cglib/cglib -->
+	<dependency>
+	    <groupId>cglib</groupId>
+	    <artifactId>cglib</artifactId>
+	    <version>3.2.4</version>
+	</dependency>
+	
+
+	<!-- Logging -->
+    <dependency>
+       <groupId>org.slf4j</groupId>
+       <artifactId>slf4j-api</artifactId>
+       <version>1.7.5</version>
+   </dependency>
+   <dependency>
+       <groupId>org.slf4j</groupId>
+       <artifactId>slf4j-log4j12</artifactId>
+       <version>1.7.5</version>
+   </dependency>
+
+	<!-- Testing -->
+	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>${junit.version}</version>
+		<scope>test</scope>
+	</dependency>
+	
+	 <!-- JSON -->
+	<dependency>
+		<groupId>com.googlecode.json-simple</groupId>
+		<artifactId>json-simple</artifactId>
+		<version>1.1</version>
+	</dependency>
+		
+		<!--  Gson: Java to Json conversion -->
+   	<dependency>
+   		<groupId>com.google.code.gson</groupId>
+   		<artifactId>gson</artifactId>
+   		<version>2.2.4</version>
+   		<scope>compile</scope>
+  	</dependency> 
+    
+	<!-- Jackson --> 
+	<dependency>
+		<groupId>org.codehaus.jackson</groupId>
+		<artifactId>jackson-mapper-asl</artifactId>
+		<version>1.9.3</version>
+	</dependency>
+    
+  </dependencies>
+  <build>
+    <finalName>ServiceMiddlewareCEP</finalName>
+     <directory>target</directory>
+     <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+      </resource>
+      <resource>
+        <directory>src/main/java</directory>
+      </resource>
+    </resources>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <testSourceDirectory>src/test/java</testSourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+ 
+      <plugin>  <!-- need this blurb to build a *runnable* jar -->
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+              <mainClass>com.service.middleware.main.MainServiceMiddlewareRabbitMQ</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      </plugins>
+  </build>
+</project>

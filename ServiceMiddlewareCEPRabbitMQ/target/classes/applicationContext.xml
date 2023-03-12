@@ -30,8 +30,7 @@
 	<rabbit:queue name="${queue.rule.cep}" auto-delete="false" durable="true" exclusive="false"  />
 	<rabbit:queue name="${queue.streaming.data}" auto-delete="false" durable="true" exclusive="false"  />
    
-   <!-- From RabbitMQ To STDOUT -->
-
+    <!-- From RabbitMQ To STDOUT -->
 	<int-amqp:inbound-channel-adapter channel="fromRabbit2"	queue-names="${queue.streaming.data}" connection-factory="connectionFactory" />
 	<int:channel id="fromRabbit2" />
 	<bean id="consumerServiceActivator" class="com.service.middleware.util.ConsumerServiceActivator" />
