@@ -16,13 +16,16 @@ services:
       dockerfile: ./Dockerfile
     image: middleware-rabbitmq:latest
     environment:
-      RABBIT_HOST: 172.17.0.1
+      RABBIT_HOST: amqp
       RABBIT_USERNAME: guest
       RABBIT_PASSWORD: guest
+      QUEUE_DATA: si.test.queue
+      QUEUE_RULE: si.ceprule.queue
       JAR_NAME: ServiceMiddlewareRabbitMQ-0.0.1-SNAPSHOT.jar
     networks:
       - rabbitmq_go_net
 
 networks:
   rabbitmq_go_net:
+    name: localNet
     driver: bridge
