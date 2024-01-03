@@ -2,10 +2,20 @@ version: "3"
 services:
 
   amqp:
-    image: rabbitmq:3-management-alpine
+    image: rabbitmq:3.13-rc
     ports:
       - "5672:5672"
       - "8080:15672"
+    volumes:
+      - type: bind
+        source: ./rabbitmq-enabled-plugins
+        target: /etc/rabbitmq/enabled_plugins
+      - type: bind
+        source: ./rabbitmq.config
+        target: /etc/rabbitmq/rabbitmq.config
+      - type: bind
+        source: ./rabbitmq-defs.json
+        target: /etc/rabbitmq/rabbitmq-defs.json
     networks:
       - rabbitmq_go_net
 
@@ -21,6 +31,8 @@ services:
       RABBIT_PASSWORD: guest
       QUEUE_DATA: si.test.queue
       QUEUE_RULE: si.ceprule.queue
+      RABBIT_VIRTUAL_HOST: /
+      RABBIT_PORT: 5672
       JAR_NAME: ServiceMiddlewareRabbitMQ-0.0.1-SNAPSHOT.jar
     networks:
       - rabbitmq_go_net
