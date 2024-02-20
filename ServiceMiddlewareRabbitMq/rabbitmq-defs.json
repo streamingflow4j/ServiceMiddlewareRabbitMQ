@@ -35,6 +35,15 @@
       "arguments": {}
     }
   ],
+  "topic_permissions": [
+    {
+        "user": "guest",
+        "vhost": "/",
+        "exchange": "amq.topic",
+        "write": "[^.]+\\.sample\\.[^.]+",
+        "read": ""
+    }
+  ],
   "queues": [
     {
       "name": "si.test.queue",
@@ -49,6 +58,13 @@
       "durable": true,
       "auto_delete": false,
       "arguments": {}
+    },
+    {
+      "name": "si.cep.queue",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
     }
   ],
   "bindings": [
@@ -56,6 +72,22 @@
       "source": "si.test.queue",
       "vhost": "/",
       "destination": "si.test.queue",
+      "destination_type": "queue",
+      "routing_key": "*",
+      "arguments": {}
+    },
+	{
+      "source": "si.ceprule.queue",
+      "vhost": "/",
+      "destination": "si.ceprule.queue",
+      "destination_type": "queue",
+      "routing_key": "*",
+      "arguments": {}
+    },
+	{
+      "source": "si.cep.queue",
+      "vhost": "/",
+      "destination": "si.cep.queue",
       "destination_type": "queue",
       "routing_key": "*",
       "arguments": {}

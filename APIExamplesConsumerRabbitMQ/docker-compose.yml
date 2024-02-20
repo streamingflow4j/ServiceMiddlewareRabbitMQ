@@ -1,20 +1,22 @@
 version: "3"
 services:
 
-  endpoint-rest-rabbit:
-    container_name: consumer-endpoint-rabbit
+  consumer-rabbitmq:
+    container_name: consumer-rabbitmq
     build:
       context: ./target
       dockerfile: ./Dockerfile
-    image: rest-endpoint-rabbit:latest
+    image: consumer-rabbitmq:latest
     ports:
       - "8082:8082"
     environment:
+      environment:
       RABBIT_HOST: amqp
       RABBIT_USERNAME: guest
       RABBIT_PASSWORD: guest
-      QUEUE_DATA: si.test.queue
-      QUEUE_RULE: si.ceprule.queue
+      RABBIT_VIRTUAL_HOST: /
+      RABBIT_PORT: 5672
+      KAFKA_CONSUMER_QUEUE: si.cep.queue
       JAR_NAME: SpringBootRabbitMQConsumer-0.0.1.jar
     networks:
       - rabbitmq_go_net

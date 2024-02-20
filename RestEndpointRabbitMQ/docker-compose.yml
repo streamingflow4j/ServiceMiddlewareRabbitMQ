@@ -10,11 +10,14 @@ services:
     ports:
       - "8080:8080"
     environment:
+      environment:
       RABBIT_HOST: amqp
       RABBIT_USERNAME: guest
       RABBIT_PASSWORD: guest
       QUEUE_DATA: si.test.queue
       QUEUE_RULE: si.ceprule.queue
+      RABBIT_VIRTUAL_HOST: /
+      RABBIT_PORT: 5672
       JAR_NAME: RestEndpointRabbitMQ-0.0.1-SNAPSHOT.jar
     networks:
       - rabbitmq_go_net

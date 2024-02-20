@@ -2,6 +2,7 @@ version: "3"
 services:
 
   amqp:
+    container_name: amqp
     image: rabbitmq:3.13-rc
     ports:
       - "5672:5672"
@@ -25,6 +26,8 @@ services:
       context: ./target
       dockerfile: ./Dockerfile
     image: middleware-rabbitmq:latest
+    ports:
+      - "8081:8081"
     environment:
       RABBIT_HOST: amqp
       RABBIT_USERNAME: guest
