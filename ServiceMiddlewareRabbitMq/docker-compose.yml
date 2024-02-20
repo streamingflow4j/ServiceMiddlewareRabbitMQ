@@ -5,7 +5,7 @@ services:
     image: rabbitmq:3.13-rc
     ports:
       - "5672:5672"
-      - "8080:15672"
+      - "8181:15672"
     volumes:
       - type: bind
         source: ./rabbitmq-enabled-plugins
