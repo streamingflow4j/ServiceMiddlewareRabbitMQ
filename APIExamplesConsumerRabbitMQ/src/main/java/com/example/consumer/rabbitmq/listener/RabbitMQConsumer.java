@@ -1,14 +1,16 @@
 package com.example.consumer.rabbitmq.listener;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
+
+import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+import java.util.Base64;
+import java.util.LinkedList;
+import java.util.Queue;
 
 
 @Component
@@ -20,9 +22,8 @@ public class RabbitMQConsumer {
 
 	
 	@RabbitListener(queues = "${rabbitmq.consumer.data.queue}")
-	public void recievedMessage(String message) {
-
-		str_queue.add(message);
+	public void recievedMessage(Message message) {
+		str_queue.add(Arrays.toString(message.getBody()));
 		log.info("Recieved Message From RabbitMQ: {}", message);
 	}
 	

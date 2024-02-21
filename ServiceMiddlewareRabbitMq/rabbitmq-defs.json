@@ -40,8 +40,8 @@
         "user": "guest",
         "vhost": "/",
         "exchange": "amq.topic",
-        "write": "[^.]+\\.sample\\.[^.]+",
-        "read": ""
+        "write": ".*",
+        "read": ".*"
     }
   ],
   "queues": [

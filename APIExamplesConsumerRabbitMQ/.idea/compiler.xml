@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Consumer1" />
+        <module name="SpringBootRabbitMQConsumer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Consumer1" target="1.8" />
+      <module name="SpringBootRabbitMQConsumer" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
