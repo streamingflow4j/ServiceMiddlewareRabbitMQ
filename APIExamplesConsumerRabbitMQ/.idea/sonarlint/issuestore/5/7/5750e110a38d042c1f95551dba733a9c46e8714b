@@ -1,15 +1,0 @@
-
-L
-java:S3740"/Provide the parametrized type for this generic.(Íäåó8öÄùàÜ1
-L
-java:S3740"/Provide the parametrized type for this generic.(“îÚ¹8öÄùàÜ1
-q
-java:S3008"TRename this field "str_queue" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á‚Õ˜8‘ÅùàÜ1
-R
-java:S1854"5Remove this useless assignment to local variable "m".(Íäåó8™ÅùàÜ1
-C
-java:S1481"&Remove this unused "m" local variable.(Íäåó8ÅùàÜ1
-9
-java:S1116"Remove this empty statement.(á‚Õ˜8§ÅùàÜ1
-]	java:S125"<This block of commented-out lines of code should be removed.(Ù´ş‘şÿÿÿÿ8«ÅùàÜ1
-X	java:S125!"<This block of commented-out lines of code should be removed.(ğ÷¨©8­ÅùàÜ1
