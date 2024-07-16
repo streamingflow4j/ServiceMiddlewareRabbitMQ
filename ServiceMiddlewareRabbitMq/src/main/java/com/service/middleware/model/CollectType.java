@@ -36,4 +36,4 @@ public enum CollectType{
 		}
 		return null;
 	}
-};
+}
