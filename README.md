@@ -22,21 +22,21 @@ Execute RestEndpointRabbitMQ Spring Boot application
 ```In Event ID is defined as one Unique Identifier name and
 The event type defines the operation in the following steps:```
 
-**Step 1 - Scope Addiction Event:
+### Step 1 - Scope Addiction Event:
 - EVENT_CREATE -- Type to define the creation of a new event
 
-**Step 2 - Scope Addiction Rule:
+### Step 2 - Scope Addiction Rule:
 - RULE_CREATE  ```Type to define the creation of a rule```
 - RULE_QUERY ```Indicate an EPL(Esper Query Language) this QUERY should be added(EX.: select temperature from Thermometer.win:time(5 sec))```
 - RULE_QUEUE ```Define destination queue of rule trigger```
 
- **Step 3 - Scope Edition Rule:
+### Step 3 - Scope Edition Rule:
 - RULE_UPDATE  ```Type for defining the EDITION of a rule```
 - RULE_QUERY ```Indicate an EPL(Esper Query Language) this QUERY should be added(EX.: select temperature from Thermometer.win:time(5 sec))```
 - RULE_QUEUE ```Define destination queue of rule trigger```
 - RULE_ID ```ID of the rule to be Edited```
 
-**Step 4 - Scope Delete Rule:
+### Step 4 - Scope Delete Rule:
 - RULE_DELETE ```Type for deleting a Rule```
 - RULE_ID ```ID of the rule to be Deleted```
 
