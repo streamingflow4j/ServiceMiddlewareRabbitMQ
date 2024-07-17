@@ -19,14 +19,6 @@ Execute RestEndpointRabbitMQ Spring Boot application
 
 
 ### API elements
-- ADD_EVENT ```add event type, every before specific rule```
-- RULECEP   ```define addiction of a rule```
-- RULE ```indicate the QUERY to be add(EX.: select temperature from Termometer.win:time(5 sec))``` 
--	QUEUE ```define destination queue of rule trigger```
-- EDIT_RULECEP ```define EDITION of a rule```	
-- RULE_ID ```ID of rule to be Edited/Deleted```
-- DEL_RULE ```command to delete rule```
-
 ```In Event ID is defined as one Unique Identifier name and
 The event type defines the operation in the following steps:```
 
