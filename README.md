@@ -175,4 +175,5 @@ If you find this project helpful in your research, please cite this work at
     author = {H Diniz},
     month = {January},
     year = {2019}
+}
 ```
