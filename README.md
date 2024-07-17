@@ -19,8 +19,8 @@ Execute RestEndpointRabbitMQ Spring Boot application
 
 
 ### API elements
-```In Event ID is defined as one Unique Identifier name and
-The event type defines the operation in the following steps:```
+In Event ID is defined as one Unique Identifier name and
+The event type defines the operation in the following steps:
 
 ### Step 1 - Scope Addiction Event:
 - EVENT_CREATE -- Type to define the creation of a new event
@@ -164,9 +164,8 @@ f) Scope of data Consumer:
 }
 ```
 
-# License and Citation
-## The code is available under Apache License.
-
+## 4. License and Citation
+The code is available under Apache License.
 If you find this project helpful in your research, please cite this work at
 
 ```
