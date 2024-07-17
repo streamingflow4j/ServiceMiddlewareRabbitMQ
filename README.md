@@ -27,13 +27,35 @@ Execute RestEndpointRabbitMQ Spring Boot application
 - RULE_ID ```ID of rule to be Edited/Deleted```
 - DEL_RULE ```command to delete rule```
 
+```In Event ID is defined as one Unique Identifier name and
+The event type defines the operation in the following steps:```
+
+### **Step 1 - Scope Addiction Event:
+- EVENT_CREATE -- Type to define the creation of a new event
+
+### **Step 2 - Scope Addiction Rule:
+- RULE_CREATE  ```Type to define the creation of a rule```
+- RULE_QUERY ```Indicate an EPL(Esper Query Language) this QUERY should be added(EX.: select temperature from Thermometer.win:time(5 sec))```
+- RULE_QUEUE ```Define destination queue of rule trigger```
+
+### **Step 3 - Scope Edition Rule:
+- RULE_UPDATE  ```Type for defining the EDITION of a rule```
+- RULE_QUERY ```Indicate an EPL(Esper Query Language) this QUERY should be added(EX.: select temperature from Thermometer.win:time(5 sec))```
+- RULE_QUEUE ```Define destination queue of rule trigger```
+- RULE_ID ```ID of the rule to be Edited```
+
+### **Step 4 - Scope Delete Rule:
+- RULE_DELETE ```Type for deleting a Rule```
+- RULE_ID ```ID of the rule to be Deleted```
+
+
 a) Defining a context element entity for event types:
 
 -- post RabbitMQ endpoint: </endpoint-address-uri>/rabbitmq/event/create
 -- post Body:
 ```
 {
-"type" : "ADD_EVENT",
+"type" : "EVENT_CREATE",
 "id" : "Termometer",
 "attributes" : [
 { 
@@ -55,16 +77,16 @@ b) Creating context rules for event types:
 -- post Body:
 ```
 {
-"type" : "RULECEP", 
+"type" : "RULE_CREATE", 
 "id" : "Rule7",
 "attributes" : [
-{ "name"  : "RULE",   --Attribute for rule definition
+{ "name"  : "RULE_QUERY",   --Attribute for rule definition
 "type"  : "String",
 "value" : "select temperature from Termometer.win:time(5 sec)"
 },
 {
 "name"  : "QUEUE_1",
-"type"  : "QUEUE",         --Attribute for destination queue of rule outcomes
+"type"  : "RULE_QUEUE",         --Attribute for destination queue of rule outcomes
 "value" : "si.cep.queue" 
 }
 ]
@@ -76,7 +98,7 @@ c) Updating context rules for event types:
 -- put Body:
 ```
 {
-"type" : "EDIT_RULECEP",
+"type" : "RULE_UPDATE",
 "id" : "Rule3",
 "attributes" : [
 { 
@@ -85,13 +107,13 @@ c) Updating context rules for event types:
 "value" : "f9c9c1c1-d1ed-4f03-99cb-7083533ac2e0"
 },
 {
-"name"  : "RULE",    --Attribute for rule update
+"name"  : "RULE_QUERY",    --Attribute for rule update
 "type"  : "String",  
 "value" : "select temperature from Termometer.win:time(10 sec)"
 },
 {
 "name"  : "QUEUE_1",
-"type"  : "QUEUE",        --You can change destination queue or else keep the same
+"type"  : "RULE_QUEUE",        --You can change destination queue or else keep the same
 "value" : "si.cep.queue"
 }
 ]
@@ -104,7 +126,7 @@ d) Delete a rule defined:
 -- post Body:
 ```
 {
-"type" : "DEL_RULE",
+"type" : "RULE_DELETE",
 "id" : "DelRule3",
 "attributes" : [
 {
