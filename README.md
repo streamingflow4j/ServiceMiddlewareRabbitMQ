@@ -1,5 +1,10 @@
-# About this project (ServiceMiddlewareRabbitMQ)
-This project is a contextual middleware made with java, Spring Integration and EsperCEP.
+# StreamingFlow4J: Event Driven Framework with inference engine for Complex Event Processing
+
+## 🤔 What is it used for? 
+Add Complex Event Processing with Event-Driven, CQRS, Message Route to Java applications.
+
+## About this project (ServiceMiddlewareRabbitMQ)
+This project is a contextual middleware made with java,  Spring Boot and EsperCEP.
 
 ## 1. Running the RabbitMQ project
 Install and run RabbitMQ. More informations(https://www.rabbitmq.com/#getstarted).
@@ -165,6 +170,24 @@ f) Scope of data Consumer:
 ```
 
 ## 4. License and Citation
+The code is available under Apache License.
+If you find this project helpful in your research, please cite this work at
+
+```
+@misc{sf4j2019,
+    title = {StreamingFlow4J: A modern Java Event Driven CEP Framework for Microservices},
+    url = {https://github.com/streamingflow4j},
+    author = {H Diniz},
+    month = {January},
+    year = {2019}
+}
+```
+## ⭐ Give us a star!
+
+Like what you see? Please consider giving this a star (★)!
+
+## 🏷️ License and Citation
+
 The code is available under Apache License.
 If you find this project helpful in your research, please cite this work at
 
