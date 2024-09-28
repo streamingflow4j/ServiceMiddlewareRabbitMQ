@@ -31,7 +31,7 @@ public class ConsumerServiceActivator {
 	public void listenQueueA(@Payload Message payload)  throws NumberFormatException,
 			NoSuchMethodException, SecurityException, IllegalAccessException,
 			IllegalArgumentException, InvocationTargetException, JsonParseException, JsonMappingException, IOException{
-
+		payload.getMessageProperties().setContentType("application/json");
 		Entity event = objectMapper.readValue(payload.getBody(), Entity.class);
 		monitorEventHandler.handleEntity(event);
 		System.out.println("Message receive from MainQueue: "+payload);
