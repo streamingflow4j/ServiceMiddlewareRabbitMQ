@@ -23,7 +23,7 @@ public class RabbitMQConsumer {
 	
 	@RabbitListener(queues = "${rabbitmq.consumer.data.queue}")
 	public void recievedMessage(Message message) {
-		str_queue.add(Arrays.toString(message.getBody()));
+		str_queue.add(new String(message.getBody()));
 		log.info("Recieved Message From RabbitMQ: {}", message);
 	}
 	

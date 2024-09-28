@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.consumer.rabbitmq.listener.RabbitMQConsumer;
 
+import java.nio.charset.StandardCharsets;
+
 @RestController
 @RequestMapping(value = "/test")
 public class RestRabbitController {
@@ -22,7 +24,7 @@ public class RestRabbitController {
 	 @ResponseStatus(HttpStatus.OK)	
 	 @GetMapping(value = "/get")
      public ResponseEntity getConsumerRelease() {
-		 return new ResponseEntity<>(restRabbit.dequeue(), HttpStatus.OK);      
+		 return new ResponseEntity<>(restRabbit.dequeue(), HttpStatus.OK);
 	 }
 	
 }
