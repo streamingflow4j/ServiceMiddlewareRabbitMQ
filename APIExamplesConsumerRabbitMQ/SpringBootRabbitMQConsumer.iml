@@ -53,7 +53,4 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.3.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.json:json:20140107" level="project" />
   </component>
-  <component name="SonarLintModuleSettings">
-    <option name="uniqueId" value="10727186-1474-4f16-bb6c-40331740636b" />
-  </component>
 </module>

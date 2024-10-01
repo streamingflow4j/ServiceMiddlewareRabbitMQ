@@ -1,14 +1,15 @@
 package com.example.consumer.rabbitmq.listener;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-import java.util.Base64;
+
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -18,11 +19,11 @@ public class RabbitMQConsumer {
     
 	private static final Logger log = LoggerFactory.getLogger(RabbitMQConsumer.class);
 	
-	private static Queue<String> str_queue = new LinkedList<>();;
+	private static Queue<String> str_queue = new LinkedList<String>();;
 
-	
+
 	@RabbitListener(queues = "${rabbitmq.consumer.data.queue}")
-	public void recievedMessage(Message message) {
+	public void recievedMessage(Message message) throws IOException {
 		str_queue.add(new String(message.getBody()));
 		log.info("Recieved Message From RabbitMQ: {}", message);
 	}
