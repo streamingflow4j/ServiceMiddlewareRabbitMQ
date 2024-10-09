@@ -166,3 +166,21 @@ f) Scope of data Consumer:
 ]
 }
 ```
+## ⭐ Give us a star!
+
+Like what you see? Please consider giving this a star (★)!
+
+## 🏷️ License and Citation
+
+The code is available under Apache License.
+If you find this project helpful in your research, please cite this work at
+
+```
+@misc{sf4j2019,
+    title = {StreamingFlow4J: A modern Java Event Driven CEP Framework for Microservices},
+    url = {https://github.com/streamingflow4j},
+    author = {H Diniz},
+    month = {January},
+    year = {2019}
+}
+```
