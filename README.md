@@ -16,7 +16,7 @@ Install and run RabbitMQ. More informations(https://www.rabbitmq.com/#getstarted
 - queue.streaming.data=si.test.queue (Queue of data streming)
 - queue.rule.cep=si.ceprule.queue (Queue of data rules)
 4. Build the project using mvn clean install
-5. Run it using `java -cp target/ServiceMiddlewareCEPRabbitMQ.jar com.service.middleware.main.MainServiceMiddlewareRabbitMQ`
+5. Run it using `java -cp target/StreamingFlow4JRabbitMQ.jar com.service.middleware.main.AppApplication`
 
 ## 3. API examples (Monitoring Temperature):
 Sending message to rabbitMQ queues with the following scope.
