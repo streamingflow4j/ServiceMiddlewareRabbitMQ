@@ -15,19 +15,19 @@ Install and run RabbitMQ. More informations(https://www.rabbitmq.com/#getstarted
 3. Configure docker-compose.yml:
  - queue.streaming.data=si.test.queue (Queue of data streming)
  - queue.rule.cep=si.ceprule.queue (Queue of data rules)
-4. Using Docker follow the steps: 
+4. Using Docker follow the steps:   
  a) StreamingFlow4JKafka:
- - mvn clean install
- - docker build --tag streamingflow4j-rabbitmq .
- - docker compose -f  docker-compose.yml up --detach
+  - mvn clean install
+  - docker build --tag streamingflow4j-rabbitmq .
+  - docker compose -f  docker-compose.yml up --detach
  b) RestEndpointKafka:
- - mvn clean install
- - docker build --tag endpoint-rabbitmq . 
- - docker compose -f  docker-compose.yml up --detach
+  - mvn clean install
+  - docker build --tag endpoint-rabbitmq . 
+  - docker compose -f  docker-compose.yml up --detach
  c) APIExamplesConsumerKafka: 
- - mvn clean install
- - docker build --tag consumer-rabbitmq .
- - docker compose -f  docker-compose.yml up --detach
+  - mvn clean install
+  - docker build --tag consumer-rabbitmq .
+  - docker compose -f  docker-compose.yml up --detach
 
 ## 3. API examples (Monitoring Temperature):
 Sending message to rabbitMQ queues with the following scope.
