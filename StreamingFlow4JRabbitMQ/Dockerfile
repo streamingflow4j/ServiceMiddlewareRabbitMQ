@@ -5,7 +5,7 @@ RUN mkdir -p /app
 VOLUME /app
 
 ENV JAVA_OPTS="-Xms64m -Xmx128m -XX:MaxPermSize=128m"
-ENV JAR_NAME="ServiceMiddlewareRabbitMQ-0.0.1-SNAPSHOT.jar"
+ENV JAR_NAME="StreamingFlow4JRabbitMQ-0.0.1-SNAPSHOT.jar"
 
 COPY ./target/${JAR_NAME} /app
 

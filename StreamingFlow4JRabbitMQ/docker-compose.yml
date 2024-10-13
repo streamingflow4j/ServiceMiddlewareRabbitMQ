@@ -20,12 +20,12 @@ services:
     networks:
       - rabbitmq_go_net
 
-  middleware-rabbitmq:
-    container_name: middleware-rabbitmq
+  streamingflow4j-rabbitmq:
+    container_name: streamingflow4j-rabbitmq
     build:
       context: ./target
       dockerfile: ./Dockerfile
-    image: middleware-rabbitmq:latest
+    image: streamingflow4j-rabbitmq:latest
     ports:
       - "8081:8081"
     environment:
@@ -36,7 +36,7 @@ services:
       QUEUE_RULE: si.ceprule.queue
       RABBIT_VIRTUAL_HOST: /
       RABBIT_PORT: 5672
-      JAR_NAME: ServiceMiddlewareRabbitMQ-0.0.1-SNAPSHOT.jar
+      JAR_NAME: StreamingFlow4JRabbitMQ-0.0.1-SNAPSHOT.jar
     networks:
       - rabbitmq_go_net
 
