@@ -122,7 +122,7 @@ c) Updating context rules for event types:
 },
 {
 "name"  : "QUEUE_1",
-"type"  : "RULE_QUEUE",        --You can change destination queue or else keep the same
+"type"  : "RULE_QUEUE",
 "value" : "si.cep.queue"
 }
 ]
