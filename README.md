@@ -16,7 +16,11 @@ Install and run RabbitMQ. More informations(https://www.rabbitmq.com/#getstarted
  - queue.streaming.data=si.test.queue (Queue of data streming)
  - queue.rule.cep=si.ceprule.queue (Queue of data rules)
 
-4. Using Docker follow the steps:
+## 3. API examples (Monitoring Temperature):
+Sending message to rabbitMQ queues with the following scope.
+Execute RestEndpointRabbitMQ Spring Boot application
+
+## 4. Using Docker follow the steps:
  
  a)StreamingFlow4JKafka:
  - mvn clean install
@@ -32,10 +36,6 @@ Install and run RabbitMQ. More informations(https://www.rabbitmq.com/#getstarted
  - mvn clean install
  - docker build --tag consumer-rabbitmq .
  - docker compose -f  docker-compose.yml up --detach
-
-## 3. API examples (Monitoring Temperature):
-Sending message to rabbitMQ queues with the following scope.
-Execute RestEndpointRabbitMQ Spring Boot application
 
 ### API elements
 In Event ID is defined as one Unique Identifier name and
@@ -123,7 +123,7 @@ c) Updating context rules for event types:
 },
 {
 "name"  : "QUEUE_1",
-"type"  : "RULE_QUEUE",        --You can change destination queue or else keep the same
+"type"  : "RULE_QUEUE",
 "value" : "si.cep.queue"
 }
 ]
