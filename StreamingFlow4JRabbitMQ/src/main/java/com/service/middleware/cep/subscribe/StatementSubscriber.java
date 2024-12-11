@@ -12,4 +12,6 @@ public interface StatementSubscriber {
      */
     public String getStatement();
 
+    public void setStatement(String statement);
+
 }
