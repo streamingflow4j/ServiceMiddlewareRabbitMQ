@@ -2,9 +2,9 @@ package com.service.middleware.model;
 
 public class Attribute{
 
-	String name;
-	String type;
-	String value;
+	private String name;
+	private String type;
+	private String value;
 
 	public Attribute(String name, String type, String value) {
 		super();

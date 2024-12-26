@@ -5,7 +5,6 @@ import com.service.middleware.cep.handler.MonitorEventHandler;
 import com.service.middleware.cep.subscribe.MonitorEventSubscriber;
 import com.service.middleware.listener.ConsumerServiceActivator;
 import com.service.middleware.listener.ModelTransformer;
-import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;

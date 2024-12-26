@@ -1,13 +1,11 @@
 package com.service.middleware.listener;
 
-
 import org.codehaus.jackson.map.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
-
 
 import com.service.middleware.cep.handler.MonitorEventHandler;
 import com.service.middleware.model.Entity;
