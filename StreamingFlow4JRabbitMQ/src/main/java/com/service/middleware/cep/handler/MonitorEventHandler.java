@@ -29,7 +29,7 @@ import net.sf.cglib.core.Predicate;
 @Scope(value = "singleton")
 public class MonitorEventHandler implements InitializingBean {
 
-	private final Logger logger = LoggerFactory.getLogger(MonitorEventHandler.class);
+	private final static Logger logger = LoggerFactory.getLogger(MonitorEventHandler.class);
 
 	/** Esper cep service */
 	private EPServiceProvider epService;
@@ -37,8 +37,8 @@ public class MonitorEventHandler implements InitializingBean {
 	@Autowired
 	private MonitorEventSubscriber monitorEventSubscriber;
 
-	private static ConcurrentHashMap<UUID, RunTimeEPStatement> queriesEpl = new ConcurrentHashMap<>();
-	private static ConcurrentHashMap<String, Object> cHM = new ConcurrentHashMap<>();
+	private static ConcurrentHashMap<UUID, RunTimeEPStatement> queriesEpl = new ConcurrentHashMap<UUID, RunTimeEPStatement>();
+	private static ConcurrentHashMap<String, Object> cHM = new ConcurrentHashMap<String, Object>();
 	private AtomicLong eventsHandledCount;
 	private AtomicLong eventsHandledMicroseconds;
 	private Configuration config;
