@@ -246,14 +246,14 @@ public class MonitorEventHandler implements InitializingBean {
 
 	public String getListenerRule(){
 		for (String listener : epService.getEPAdministrator().getStatementNames()) {
-			EPStatement GSignal = epService.getEPAdministrator().getStatement(listener);
-			GSignal.addListener(new UpdateListener() {
+			EPStatement gSignal = epService.getEPAdministrator().getStatement(listener);
+			gSignal.addListener(new UpdateListener() {
 				@Override
 				public void update(EventBean[] newEvents, EventBean[] oldEvents) {
 					if (newEvents == null) {
 						return;
 					}
-					listEpl = GSignal.getText();
+					listEpl = gSignal.getText();
 					monitorEventSubscriber.setStatement(listEpl);
 				}
 			});
