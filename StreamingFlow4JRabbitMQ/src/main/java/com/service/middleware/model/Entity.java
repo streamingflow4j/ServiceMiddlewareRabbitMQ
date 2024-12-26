@@ -2,7 +2,7 @@ package com.service.middleware.model;
 
 import java.util.List;
 
-public class gitEntity {
+public class Entity {
 	
 	private String id;
 	private String type;
