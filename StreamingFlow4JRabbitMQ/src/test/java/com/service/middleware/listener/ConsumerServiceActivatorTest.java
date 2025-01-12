@@ -15,8 +15,6 @@ import org.springframework.amqp.core.MessageProperties;
 
 import java.util.Arrays;
 
-import static org.mockito.Mockito.*;
-
 class ConsumerServiceActivatorTest {
 
     @Mock

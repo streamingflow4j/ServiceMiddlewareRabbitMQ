@@ -131,7 +131,6 @@ public class MonitorEventHandler implements InitializingBean {
 	}
 
 	public void afterPropertiesSet() throws Exception {
-		// TODO Auto-generated method stub
 		initService();
 	}
 

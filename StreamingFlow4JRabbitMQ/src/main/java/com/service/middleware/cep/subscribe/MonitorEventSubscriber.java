@@ -3,6 +3,8 @@ package com.service.middleware.cep.subscribe;
 import java.util.*;
 import java.util.Map.Entry;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -21,7 +23,9 @@ public class MonitorEventSubscriber implements StatementSubscriber {
 	static Map<String, List<String>> mapQueue = new HashMap<>();
 	Entity myEntity;
 
-	Entity myEvent;
+	@Setter
+    @Getter
+    Entity myEvent;
 
 	public static String newPayload;
 
@@ -30,9 +34,6 @@ public class MonitorEventSubscriber implements StatementSubscriber {
 
 	@Autowired
 	RabbitTemplate template;
-
-    public MonitorEventSubscriber() {
-    }
 
     /**
 	 * {@inheritDoc}
@@ -45,15 +46,7 @@ public class MonitorEventSubscriber implements StatementSubscriber {
 		this.mainRule = statement;
 	}
 
-	public Entity getMyEvent() {
-		return myEvent;
-	}
-
-	public void setMyEvent(Entity myEvent) {
-		this.myEvent = myEvent;
-	}
-
-	/**
+    /**
 	 * Listener method called when Esper has detected a pattern match.
 	 * 
 	 * @throws Exception
@@ -136,7 +129,7 @@ public class MonitorEventSubscriber implements StatementSubscriber {
 
 	public String setMyEntity(Entity myEntity) {
 		this.myEntity = myEntity;
-		Map<String, String> update = new HashMap<String, String>();
+		Map<String, String> update = new HashMap<>();
 		for (Attribute rule : myEntity.getAttributes()) {
 			if (verifyDelRule(myEntity)) {
 				if (rule.getName().equals(CollectType.RULE_ATTR_ID.getName())) {
@@ -161,12 +154,10 @@ public class MonitorEventSubscriber implements StatementSubscriber {
 	public void setQueueMapping(String id, Entity myEntity){
 		String epl = myEntity.getAttributes().get(0).getValue();
 		String queueDest = myEntity.getAttributes().get(1).getValue();
-		ArrayList<String> arr = new ArrayList<String>();
-		String uuid = id;
+		ArrayList<String> arr = new ArrayList<>();
 		arr.add(0,queueDest);
 		arr.add(1,epl);
 		mapQueue.put(id, arr);
-
 	}
 
 	public String editQueueDest(String id, Entity myEntity){
@@ -175,7 +166,7 @@ public class MonitorEventSubscriber implements StatementSubscriber {
 		for (Entry<String, List<String>> item : mapQueue.entrySet()) {
 			String key = item.getKey();
 			if(key.equals(id)){
-				List<String> values = new ArrayList<String>();
+				List<String> values = new ArrayList<>();
 				values.add(0,newQueue);
 				values.add(1,epl);
 				mapQueue.remove(key);

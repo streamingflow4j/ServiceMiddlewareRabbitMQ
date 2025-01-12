@@ -1,6 +1,10 @@
 package com.service.middleware.model;
 
-public enum CollectType{ 
+import lombok.Getter;
+
+
+@Getter
+public enum CollectType{
 	NONE ("NONE"),
 	EVENT_CREATE_TYPE("EVENT_CREATE"), //add event type, every before specific rule
 	RULE_CREATE_TYPE("RULE_CREATE"), //define addiction of a rule
@@ -16,12 +20,8 @@ public enum CollectType{
 	CollectType(String name){
 		this.name = name;
 	}
-	
-	public String getName() {
-		return name;
-	}
-	
-	@Override
+
+    @Override
 	public String toString() {
 		return name;
 	}
@@ -36,4 +36,4 @@ public enum CollectType{
 		}
 		return null;
 	}
-};
+}
