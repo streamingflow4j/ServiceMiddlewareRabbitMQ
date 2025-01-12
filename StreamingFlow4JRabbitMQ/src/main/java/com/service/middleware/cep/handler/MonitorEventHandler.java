@@ -7,6 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 import com.espertech.esper.client.*;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
@@ -42,7 +43,6 @@ public class MonitorEventHandler implements InitializingBean {
 	private AtomicLong eventsHandledCount;
 	private AtomicLong eventsHandledMicroseconds;
 	private Configuration config;
-	int count = 0;
 
 	static String listEpl;
 
@@ -60,7 +60,7 @@ public class MonitorEventHandler implements InitializingBean {
 		epService = EPServiceProviderManager.getDefaultProvider(config);
 	}
 
-	public void createRequestMonitorExpression(Entity myEntity) throws Exception {
+	public void createRequestMonitorExpression(@NotNull Entity myEntity) throws Exception {
 		String verify = "";
 		if (myEntity.getType().equals(CollectType.EVENT_CREATE_TYPE.getName())) {
 			createBeans(myEntity);
@@ -85,7 +85,7 @@ public class MonitorEventHandler implements InitializingBean {
 							queriesEpl.put(id, new RunTimeEPStatement(monitorEventStatement, myEpl));
 							monitorEventSubscriber.editQueueDest(id.toString(), myEntity);
 							logger.info("==============================================================");
-							logger.info("Runtime EPStatement Updated. id: " + id);
+							logger.info("Runtime EPStatement Updated. id: {}", id);
 							logger.info("==============================================================");
 						}
 					} else {
@@ -98,7 +98,7 @@ public class MonitorEventHandler implements InitializingBean {
 					monitorEventSubscriber.setQueueMapping(uuid.toString(),myEntity);
 					if (logger.isInfoEnabled()) {
 						logger.info("==============================================================");
-						logger.info("Runtime EPStatement Created. id: " + uuid + " QUERY: " + epl);
+						logger.info("Runtime EPStatement Created. id: {} QUERY: {}", uuid, epl);
 						logger.info("==============================================================");
 					}
 				}
@@ -110,7 +110,7 @@ public class MonitorEventHandler implements InitializingBean {
 		}
 	}
 
-	public String getEditEpl(Entity entity) {
+	public String getEditEpl(@NotNull Entity entity) {
 		for (Attribute rule : entity.getAttributes()) {
 			if (rule.getName().equals(CollectType.RULE_ATTR_NAME.getName())) {
 				return rule.getValue();
@@ -119,7 +119,7 @@ public class MonitorEventHandler implements InitializingBean {
 		return CollectType.NONE.getName();
 	}
 
-	public String getEntityId(Entity entity) {
+	public String getEntityId(@NotNull Entity entity) {
 		for (Attribute rule : entity.getAttributes()) {
 			if (rule.getName().equals(CollectType.RULE_ATTR_ID.getName())) {
 				return rule.getValue();
@@ -173,7 +173,7 @@ public class MonitorEventHandler implements InitializingBean {
 			etEps.destroy();
 			if (logger.isInfoEnabled()) {
 				logger.info("==============================================================");
-				logger.info("Runtime EPStatement Destroyed " + id);
+				logger.info("Runtime EPStatement Destroyed {}", id);
 				logger.info("==============================================================");
 			}
 			return true;
@@ -187,7 +187,7 @@ public class MonitorEventHandler implements InitializingBean {
 		if (etEps != null) {
 			etEps = runTimeEPStatement;
 			queriesEpl.put(id, runTimeEPStatement);
-			logger.info("Runtime EPStatement Updated " + id);
+			logger.info("Runtime EPStatement Updated: {}", id);
 			return true;
 		}
 		return false;
@@ -229,7 +229,7 @@ public class MonitorEventHandler implements InitializingBean {
 	}
 	// function for create rule cep
 	@SuppressWarnings("unused")
-	public void createBeans(Entity entity) {
+	public void createBeans(@NotNull Entity entity) {
 		String className = entity.getId();
 		final Map<String, Class<?>> properties = new HashMap<String, Class<?>>();
 		for (Attribute attr : entity.getAttributes()) {
@@ -240,11 +240,11 @@ public class MonitorEventHandler implements InitializingBean {
 		Object myBean = cHM.get(className);
 		epService.getEPAdministrator().getConfiguration().addEventType(className, myBean.getClass());
 		logger.info("==============================================================");
-		logger.info("Add Event class =====> " + className);
+		logger.info("Add Event class =====> {}", className);
 		logger.info("==============================================================");
 	}
 
-	public String getListenerRule(){
+	public void getListenerRule(){
 		for (String listener : epService.getEPAdministrator().getStatementNames()) {
 			EPStatement gSignal = epService.getEPAdministrator().getStatement(listener);
 			gSignal.addListener(new UpdateListener() {
@@ -259,7 +259,6 @@ public class MonitorEventHandler implements InitializingBean {
 			});
 
 		}
-		return listEpl;
 	}
 
 }
