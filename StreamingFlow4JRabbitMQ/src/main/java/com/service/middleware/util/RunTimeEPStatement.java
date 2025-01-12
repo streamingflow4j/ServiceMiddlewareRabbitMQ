@@ -2,6 +2,7 @@ package com.service.middleware.util;
 
 import com.espertech.esper.client.EPStatement;
 public class RunTimeEPStatement {
+
 	  private EPStatement statement;
 	  private String expression;
 
@@ -11,7 +12,6 @@ public class RunTimeEPStatement {
 	  public RunTimeEPStatement(EPStatement statement, String expression) {
 		super();
 		this.statement = statement;
-
 		this.expression = expression;
 	}
 

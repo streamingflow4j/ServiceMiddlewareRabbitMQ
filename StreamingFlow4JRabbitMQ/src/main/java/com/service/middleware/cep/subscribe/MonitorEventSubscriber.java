@@ -17,8 +17,8 @@ import com.service.middleware.model.Entity;
 public class MonitorEventSubscriber implements StatementSubscriber {
 
 	public static String mainRule = "";
-	Map<String, String> eventUpdate = new HashMap<String, String>();
-	static Map<String, List<String>> mapQueue = new HashMap<String, List<String>>();
+	Map<String, String> eventUpdate = new HashMap<>();
+	static Map<String, List<String>> mapQueue = new HashMap<>();
 	Entity myEntity;
 
 	Entity myEvent;

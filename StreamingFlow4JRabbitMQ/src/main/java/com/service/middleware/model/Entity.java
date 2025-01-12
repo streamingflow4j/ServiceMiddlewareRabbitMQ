@@ -3,7 +3,7 @@ package com.service.middleware.model;
 import java.util.List;
 
 public class Entity {
-	
+
 	private String id;
 	private String type;
 	private List<Attribute> attributes;
@@ -44,6 +44,5 @@ public class Entity {
 		this.attributes = attributes;
 	}
 
-	
 
 }
