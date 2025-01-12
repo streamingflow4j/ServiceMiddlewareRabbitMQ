@@ -66,20 +66,20 @@ class MonitorEventSubscriberTest {
 
         assertEquals("queue1", monitorEventSubscriber.getQueueDest());
     }
-/*
+
     @Test
     void testSetMyEntity() {
         Attribute attribute1 = new Attribute("RULE_QUERY", "type1", "value1");
         Attribute attribute2 = new Attribute("RULE_ID", "type2", "value2");
         List<Attribute> attributes = Arrays.asList(attribute1, attribute2);
-        Entity entity = new Entity("id1", "RULE_CREATE", attributes);
+        Entity entity = new Entity("id1", "RULE_UPDATE", attributes);
 
         String result = monitorEventSubscriber.setMyEntity(entity);
 
         assertEquals(CollectType.NONE.getName(), result);
         assertEquals("value1", monitorEventSubscriber.getMainRule());
     }
-*/
+
     @Test
     void testSetQueueMapping() {
         Attribute attribute1 = new Attribute("attr1", "type1", "epl1");
