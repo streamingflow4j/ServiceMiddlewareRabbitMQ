@@ -30,7 +30,7 @@ import net.sf.cglib.core.Predicate;
 @Scope(value = "singleton")
 public class MonitorEventHandler implements InitializingBean {
 
-	private final static Logger logger = LoggerFactory.getLogger(MonitorEventHandler.class);
+	private static final Logger logger = LoggerFactory.getLogger(MonitorEventHandler.class);
 
 	/** Esper cep service */
 	private EPServiceProvider epService;
