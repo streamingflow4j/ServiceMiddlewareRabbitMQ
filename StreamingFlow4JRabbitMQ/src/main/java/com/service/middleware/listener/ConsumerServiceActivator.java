@@ -23,11 +23,7 @@ public class ConsumerServiceActivator {
     @Autowired
 	private MonitorEventHandler monitorEventHandler;
 	
-	ObjectMapper objectMapper = new ObjectMapper();
-
-    public ConsumerServiceActivator() {
-    }
-
+	private ObjectMapper objectMapper = new ObjectMapper();
 
     @RabbitListener(queues = "${queue.streaming.data}")
 	public void listenQueueA(@Payload Message payload)  throws NumberFormatException,
