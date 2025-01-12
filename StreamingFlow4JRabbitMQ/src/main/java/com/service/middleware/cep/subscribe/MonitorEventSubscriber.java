@@ -25,13 +25,16 @@ public class MonitorEventSubscriber implements StatementSubscriber {
 
 	public static String newPayload;
 
-	@Autowired
-	private ConnectionFactory connectionFactory;
+	private final ConnectionFactory connectionFactory;
 
 	@Autowired
 	RabbitTemplate template;
 
-	/**
+    public MonitorEventSubscriber(ConnectionFactory connectionFactory) {
+        this.connectionFactory = connectionFactory;
+    }
+
+    /**
 	 * {@inheritDoc}
 	 */
 	public String getStatement() {

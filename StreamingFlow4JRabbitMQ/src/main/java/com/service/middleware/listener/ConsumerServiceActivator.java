@@ -21,13 +21,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class ConsumerServiceActivator {
 
-	@Autowired
-	MonitorEventHandler monitorEventHandler;
+	private final MonitorEventHandler monitorEventHandler;
 	
 	ObjectMapper objectMapper = new ObjectMapper();
 
+    public ConsumerServiceActivator(MonitorEventHandler monitorEventHandler) {
+        this.monitorEventHandler = monitorEventHandler;
+    }
 
-	@RabbitListener(queues = "${queue.streaming.data}")
+
+    @RabbitListener(queues = "${queue.streaming.data}")
 	public void listenQueueA(@Payload Message payload)  throws NumberFormatException,
 			NoSuchMethodException, SecurityException, IllegalAccessException,
 			IllegalArgumentException, InvocationTargetException, JsonParseException, JsonMappingException, IOException{

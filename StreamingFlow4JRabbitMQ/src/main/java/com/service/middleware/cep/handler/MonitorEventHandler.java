@@ -35,8 +35,7 @@ public class MonitorEventHandler implements InitializingBean {
 	/** Esper cep service */
 	private EPServiceProvider epService;
 	private EPStatement monitorEventStatement;
-	@Autowired
-	private MonitorEventSubscriber monitorEventSubscriber;
+	private final MonitorEventSubscriber monitorEventSubscriber;
 
 	private static ConcurrentHashMap<UUID, RunTimeEPStatement> queriesEpl = new ConcurrentHashMap<>();
 	private static ConcurrentHashMap<String, Object> cHM = new ConcurrentHashMap<>();
@@ -46,7 +45,11 @@ public class MonitorEventHandler implements InitializingBean {
 
 	static String listEpl;
 
-	/**
+    public MonitorEventHandler(MonitorEventSubscriber monitorEventSubscriber) {
+        this.monitorEventSubscriber = monitorEventSubscriber;
+    }
+
+    /**
 	 * Configure Esper Statement(s).
 	 *
 	 * @throws Exception

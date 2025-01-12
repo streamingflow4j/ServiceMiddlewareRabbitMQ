@@ -17,11 +17,14 @@ public class ModelTransformer {
 
 	private static final Logger log = LoggerFactory.getLogger(ModelTransformer.class);
 
-	@Autowired
-	MonitorEventHandler monitorEventHandler;
+	private final MonitorEventHandler monitorEventHandler;
 	ObjectMapper objectMapper = new ObjectMapper();
 
-	@RabbitListener(queues = "si.ceprule.queue")
+    public ModelTransformer(MonitorEventHandler monitorEventHandler) {
+        this.monitorEventHandler = monitorEventHandler;
+    }
+
+    @RabbitListener(queues = "si.ceprule.queue")
 	public void toModel(@Payload Message payload) throws Exception {
 
 		Entity myEntity = objectMapper.readValue(payload.getBody(), Entity.class);
