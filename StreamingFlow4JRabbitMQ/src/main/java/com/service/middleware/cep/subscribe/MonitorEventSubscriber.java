@@ -23,8 +23,6 @@ public class MonitorEventSubscriber implements StatementSubscriber {
 	static Map<String, List<String>> mapQueue = new HashMap<>();
 	Entity myEntity;
 
-	@Setter
-    @Getter
     Entity myEvent;
 
 	public static String newPayload;
