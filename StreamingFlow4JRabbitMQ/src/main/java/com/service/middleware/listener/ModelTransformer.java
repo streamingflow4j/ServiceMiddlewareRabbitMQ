@@ -16,12 +16,11 @@ import org.springframework.stereotype.Component;
 public class ModelTransformer {
 
 	private static final Logger log = LoggerFactory.getLogger(ModelTransformer.class);
-
-	private final MonitorEventHandler monitorEventHandler;
+	@Autowired
+	private MonitorEventHandler monitorEventHandler;
 	ObjectMapper objectMapper = new ObjectMapper();
 
-    public ModelTransformer(MonitorEventHandler monitorEventHandler) {
-        this.monitorEventHandler = monitorEventHandler;
+    public ModelTransformer() {
     }
 
     @RabbitListener(queues = "si.ceprule.queue")

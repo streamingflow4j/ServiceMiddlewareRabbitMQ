@@ -20,13 +20,12 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 public class ConsumerServiceActivator {
-
-	private final MonitorEventHandler monitorEventHandler;
+    @Autowired
+	private MonitorEventHandler monitorEventHandler;
 	
 	ObjectMapper objectMapper = new ObjectMapper();
 
-    public ConsumerServiceActivator(MonitorEventHandler monitorEventHandler) {
-        this.monitorEventHandler = monitorEventHandler;
+    public ConsumerServiceActivator() {
     }
 
 
