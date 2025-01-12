@@ -42,12 +42,10 @@ public class MonitorEventHandler implements InitializingBean {
 	private static ConcurrentHashMap<String, Object> cHM = new ConcurrentHashMap<>();
 	private AtomicLong eventsHandledCount;
 	private AtomicLong eventsHandledMicroseconds;
-	private Configuration config;
+
 
 	static String listEpl;
 
-    public MonitorEventHandler() {
-    }
 
     /**
 	 * Configure Esper Statement(s).
@@ -58,7 +56,7 @@ public class MonitorEventHandler implements InitializingBean {
 	public void initService() throws Exception {
 		eventsHandledCount = new AtomicLong(0);
 		eventsHandledMicroseconds = new AtomicLong(0);
-		config = new Configuration();
+		Configuration config = new Configuration();
 		config.addEventTypeAutoName("com.service.middleware.model");
 		epService = EPServiceProviderManager.getDefaultProvider(config);
 	}
@@ -70,7 +68,7 @@ public class MonitorEventHandler implements InitializingBean {
 		} else {
 			verify = monitorEventSubscriber.setMyEntity(myEntity);
 			if (verify.equals(CollectType.NONE.getName())) {
-				String epl = myEntity.getAttributes().get(0).getValue().toString();
+				String epl = myEntity.getAttributes().get(0).getValue();
 				if (myEntity.getType().equals(CollectType.EDIT_RULE_TYPE.getName())) {
 					epl = monitorEventSubscriber.getStatement();
 				}
