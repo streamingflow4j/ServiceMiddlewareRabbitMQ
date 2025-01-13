@@ -182,6 +182,7 @@ public class MonitorEventHandler implements InitializingBean {
 	}
 
 	// function for edit rule cep #deprecated
+/*
 	public boolean editStatement(UUID id, RunTimeEPStatement runTimeEPStatement) {
 		RunTimeEPStatement etEps = queriesEpl.get(id);
 		if (etEps != null) {
@@ -192,7 +193,7 @@ public class MonitorEventHandler implements InitializingBean {
 		}
 		return false;
 	}
-
+*/
 	public boolean isEplRegistered(UUID id) {
 		return queriesEpl.containsKey(id);
 	}
