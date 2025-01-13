@@ -85,9 +85,9 @@ public class MonitorEventHandler implements InitializingBean {
 							etEps.destroy();
 							queriesEpl.put(id, new RunTimeEPStatement(monitorEventStatement, myEpl));
 							monitorEventSubscriber.editQueueDest(id.toString(), myEntity);
-							logger.info("==============================================================");
+							////logger.info("==============================================================");
 							logger.info("Runtime EPStatement Updated. id: {}", id);
-							logger.info("==============================================================");
+							////logger.info("==============================================================");
 						}
 					} else {
 						logger.error("Error in query attribute");
@@ -98,9 +98,9 @@ public class MonitorEventHandler implements InitializingBean {
 					queriesEpl.put(uuid, new RunTimeEPStatement(monitorEventStatement, epl));
 					monitorEventSubscriber.setQueueMapping(uuid.toString(),myEntity);
 					if (logger.isInfoEnabled()) {
-						logger.info("==============================================================");
+						////logger.info("==============================================================");
 						logger.info("Runtime EPStatement Created. id: {} QUERY: {}", uuid, epl);
-						logger.info("==============================================================");
+						////logger.info("==============================================================");
 					}
 				}
 			} else if (myEntity.getType().equals(CollectType.DEL_RULE_TYPE.getName())) {
@@ -172,9 +172,9 @@ public class MonitorEventHandler implements InitializingBean {
 			queriesEpl.remove(id);
 			etEps.destroy();
 			if (logger.isInfoEnabled()) {
-				logger.info("==============================================================");
+				////logger.info("==============================================================");
 				logger.info("Runtime EPStatement Destroyed {}", id);
-				logger.info("==============================================================");
+				////logger.info("==============================================================");
 			}
 			return true;
 		}
@@ -232,7 +232,7 @@ public class MonitorEventHandler implements InitializingBean {
 	@SuppressWarnings("unused")
 	public void createBeans(@NotNull Entity entity) {
 		String className = entity.getId();
-		final Map<String, Class<?>> properties = new HashMap<String, Class<?>>();
+		final Map<String, Class<?>> properties = new HashMap<>();
 		for (Attribute attr : entity.getAttributes()) {
 			properties.put(attr.getName(), Double.class);
 		}
@@ -240,9 +240,9 @@ public class MonitorEventHandler implements InitializingBean {
 		final Class<?> beanClass = createBeanClass(className, properties);
 		Object myBean = cHM.get(className);
 		epService.getEPAdministrator().getConfiguration().addEventType(className, myBean.getClass());
-		logger.info("==============================================================");
+		////logger.info("==============================================================");
 		logger.info("Add Event class =====> {}", className);
-		logger.info("==============================================================");
+		////logger.info("==============================================================");
 	}
 
 	public void getListenerRule(){

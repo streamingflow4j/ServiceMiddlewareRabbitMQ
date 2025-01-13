@@ -12,6 +12,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
@@ -30,6 +32,9 @@ class MonitorEventHandlerTest {
     @Mock
     private MonitorEventSubscriber monitorEventSubscriber;
 
+    @Mock
+    private EPAdministrator epAdministrator;
+
     @InjectMocks
     private MonitorEventHandler monitorEventHandler;
 
@@ -41,6 +46,7 @@ class MonitorEventHandlerTest {
         MonitorEventHandler.queriesEpl = new ConcurrentHashMap<>();
         monitorEventHandler.eventsHandledCount = new AtomicLong(0);
         monitorEventHandler.eventsHandledMicroseconds = new AtomicLong(0);
+        MonitorEventHandler.cHM = new ConcurrentHashMap<>();
     }
     /*
         @Test
@@ -140,4 +146,5 @@ class MonitorEventHandlerTest {
         assertNotNull(bean);
         assertEquals(beanClass, bean.getClass());
     }
+
 }
