@@ -40,8 +40,8 @@ public class MonitorEventHandler implements InitializingBean {
 
 	public static ConcurrentHashMap<UUID, RunTimeEPStatement> queriesEpl = new ConcurrentHashMap<>();
 	public static ConcurrentHashMap<String, Object> cHM = new ConcurrentHashMap<>();
-	private AtomicLong eventsHandledCount;
-	private AtomicLong eventsHandledMicroseconds;
+	public AtomicLong eventsHandledCount;
+	public AtomicLong eventsHandledMicroseconds;
 
 
 	static String listEpl;

@@ -13,6 +13,8 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicLong;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -36,6 +38,9 @@ class MonitorEventHandlerTest {
         MockitoAnnotations.openMocks(this);
         when(epService.getEPAdministrator()).thenReturn(mock(EPAdministrator.class));
         when(epService.getEPRuntime()).thenReturn(mock(EPRuntime.class));
+        MonitorEventHandler.queriesEpl = new ConcurrentHashMap<>();
+        monitorEventHandler.eventsHandledCount = new AtomicLong(0);
+        monitorEventHandler.eventsHandledMicroseconds = new AtomicLong(0);
     }
     /*
         @Test
@@ -93,5 +98,46 @@ class MonitorEventHandlerTest {
         String result = monitorEventHandler.getEntityId(entity);
 
         assertEquals("value", result);
+    }
+
+    @Test
+    void testIsEplRegistered() {
+        UUID id = UUID.randomUUID();
+        MonitorEventHandler.queriesEpl.put(id, new RunTimeEPStatement(null, "testEpl"));
+
+        assertTrue(monitorEventHandler.isEplRegistered(id));
+        assertFalse(monitorEventHandler.isEplRegistered(UUID.randomUUID()));
+    }
+
+    @Test
+    void testGetNumEventsHandled() {
+        monitorEventHandler.eventsHandledCount.incrementAndGet();
+        assertEquals(1, monitorEventHandler.getNumEventsHandled());
+    }
+
+    @Test
+    void testGetMicrosecondsHandlingEvents() {
+        monitorEventHandler.eventsHandledMicroseconds.addAndGet(1000);
+        assertEquals(1000, monitorEventHandler.getMicrosecondsHandlingEvents());
+    }
+
+    @Test
+    void testCreateBeanClass() {
+        // Arrange
+        String className = "TestBean";
+        Map<String, Class<?>> properties = new HashMap<>();
+        properties.put("property1", Double.class);
+        properties.put("property2", Double.class);
+
+        // Act
+        Class<?> beanClass = monitorEventHandler.createBeanClass(className, properties);
+
+        // Assert
+        assertNotNull(beanClass);
+        assertEquals(className, beanClass.getName());
+        assertTrue(monitorEventHandler.cHM.containsKey(className));
+        Object bean = monitorEventHandler.cHM.get(className);
+        assertNotNull(bean);
+        assertEquals(beanClass, bean.getClass());
     }
 }
